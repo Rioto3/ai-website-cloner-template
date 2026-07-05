@@ -30,8 +30,12 @@ export function FixedContactBar() {
 
       setShown(scrollY >= viewportH);
 
-      const slotTop = slot.offsetTop;
-      const slotHeight = slot.offsetHeight;
+      // offsetTop is relative to the nearest positioned ancestor, not the
+      // document — use the bounding rect (viewport-relative) + scrollY for
+      // an absolute document position instead.
+      const rect = slot.getBoundingClientRect();
+      const slotTop = rect.top + scrollY;
+      const slotHeight = rect.height;
       setDocked(scrollY + viewportH >= slotTop + slotHeight);
     };
 

@@ -141,8 +141,8 @@ export function HeroSlider() {
 
         <div className="absolute left-0 bottom-[10%] w-full z-[7] flex items-end h-[90%] pointer-events-none">
           <div className="w-[90%] mx-auto relative max-[800px]:w-[95%]">
-            <h2 className="text-[38px] leading-[1.1] tracking-[3px] font-semibold text-tt-text inline-block relative pt-[85px] max-[800px]:pt-[65px] max-[600px]:text-[6vw] max-[600px]:tracking-[1px] max-[600px]:leading-[1.5]">
-              <span className="font-roboto text-[65px] absolute top-0 left-0 text-tt-green font-medium tracking-[5px] whitespace-nowrap max-[800px]:text-[48px] max-[480px]:text-[35px] max-[480px]:pt-[52px]">
+            <h2 className="text-[38px] leading-[1.1] tracking-[3px] font-semibold text-tt-text inline-block relative pt-[85px] max-[800px]:pt-[65px] max-[600px]:text-[6vw] max-[600px]:tracking-[1px] max-[600px]:leading-[1.5] max-[480px]:pt-[52px]">
+              <span className="font-roboto text-[65px] absolute top-0 left-0 text-tt-green font-medium tracking-[5px] whitespace-nowrap max-[800px]:text-[48px] max-[480px]:text-[35px]">
                 HAIR SALON
               </span>
               似合うスタイルをご提供します
