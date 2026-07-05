@@ -7,8 +7,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  --font-sans: var(--font-roboto), "Noto Sans JP", "Open Sans",
+    "Helvetica Neue", Helvetica, Arial, Verdana, "游ゴシック", "Yu Gothic",
+    "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+    "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  --font-roboto: var(--font-roboto), sans-serif;
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -46,33 +49,43 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* hairtt.com design tokens (source: mystyle.css :root --i_*) */
+  --color-tt-text: #463b2e; /* --i_txt_color: dark brown text */
+  --color-tt-green: #80b27f; /* --i_main_color / --i_sub_color: green accent */
+  --color-tt-beige: #f6f1ea; /* --i_sub2_color: light beige section bg */
+  --color-tt-beige2: #f1eae2; /* --i_noimg_bg_color: footer / bottom bar beige */
+  --color-tt-btn: #684733; /* --i_btn_color: brown button */
+  --color-tt-btn-hover: #7b5641; /* --i_btn_hover_color */
+  --color-tt-border: rgba(0, 0, 0, 0.13); /* --i_border_color */
+  --color-tt-shadow: rgba(0, 0, 0, 0.05); /* --i_shadow_color */
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --background: #ffffff;
+  --foreground: #463b2e;
+  --card: #ffffff;
+  --card-foreground: #463b2e;
+  --popover: #ffffff;
+  --popover-foreground: #463b2e;
+  --primary: #684733;
+  --primary-foreground: #ffffff;
+  --secondary: #f6f1ea;
+  --secondary-foreground: #463b2e;
+  --muted: #f6f1ea;
+  --muted-foreground: #666666;
+  --accent: #80b27f;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: rgba(0, 0, 0, 0.13);
+  --input: rgba(0, 0, 0, 0.13);
+  --ring: #80b27f;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  --radius: 0rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -121,10 +134,56 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
+  }
+  body {
+    /* source: mystyle.css body — 1.65rem(=16.5px)/1.9, ls 0.02rem(=0.2px), w500 */
+    @apply bg-background text-foreground;
+    font-size: 16.5px;
+    line-height: 1.9;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+  }
+  @media (max-width: 850px) {
+    body {
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+  }
+}
+
+/* ---- hairtt.com global behaviors ---- */
+
+/* Section entrance (source: cmn.css .delay1 / .delay1Active, driven by inview) */
+.reveal > * {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.8s ease-in-out;
+}
+.reveal.is-active > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Hero Ken Burns zoom (source: index.css @keyframes slide01, 7000ms ease-out forwards) */
+@keyframes tt-hero-zoom {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1) translate(0, 0);
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.12, 1.12) translate(0, 0) rotate(0.1deg);
   }
 }
