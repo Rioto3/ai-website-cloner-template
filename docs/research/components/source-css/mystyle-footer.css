@@ -1,0 +1,227 @@
+/*----------------------------footer----------------------------*/
+
+#fixbtn{
+	margin-bottom: 30px;
+	font-size: 1.55rem;
+}
+#fixbtn .fixbtnwrap{
+	background: rgba(246, 241, 234, 0.9);
+	border-top: 1px solid var(--i_border_color);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.13);
+}
+/*▼ TEL、予約ボタンない = 追従フッター有効でない場合*/
+#fixbtn.no .fixbtnwrap{
+	background-color: transparent;
+}
+#fixbtn .fixbtntel,
+#fixbtn .fixbtntel a,
+#fixbtn .fixbtntel span{
+}
+#fixbtn .fixbtntel{
+	border-right: 1px solid var(--i_border_color);
+}
+#fixbtn .fixbtntel:nth-last-of-type(2){
+	border-right: none;
+}
+#fixbtn .fixbtntel a,
+#fixbtn .fixbtntel span{
+	font-size: 3.4rem;
+	line-height: 1;
+	margin-right: 10px;
+	color: #463b2e;
+}
+#fixbtn .contents_btn01 a:hover{
+	transform: none;
+}
+#fixbtn .fixbtntel a:last-child,
+#fixbtn .fixbtntel span:last-child{
+	margin-right: 0;
+}
+#fixbtn .fixbtntel svg{
+	width: 22px;
+	height: 22px;
+	margin-right: 5px;
+	fill: #463b2e;
+}
+#fixbtn .contents_btn01{
+	border-left: 1px solid rgba(255,255,255,0.1);
+}
+#fixbtn .contents_btn01:nth-of-type(1){
+	border-left: none;
+}
+#fixbtn .contents_btn01:nth-of-type(1){
+	/*▼ TELない場合中央揃え*/
+	margin-left: auto;
+	margin-right: auto;
+}
+#fixbtn .contents_btn01 a{
+	padding: 0;
+	background: var(--i_btn_color);
+	border: 1px solid var(--i_btn_color);
+	transition: 0.4s ease-in-out;
+}
+#fixbtn .contents_btn01 span{
+	text-align: center;
+	line-height: 1.6;
+	color: #fff;
+}
+#fixbtn .contents_btn01 a:hover{
+	background: none;
+	border: 1px solid var(--i_btn_color);
+}
+#fixbtn .contents_btn01 a:hover span{
+	color: var(--i_btn_color);
+}
+#fixbtn .contents_btn01 a:before,
+#fixbtn .contents_btn01 a:after{
+	display: none;
+}
+/*▼ TEL、予約ボタンない = 追従フッター有効でない場合*/
+#fixbtn #scrolltop:nth-of-type(1){
+	margin-left: auto;
+	/*▼ 右揃え*/
+	margin-right: 0;
+	/*▼ 中央揃え*/
+	margin-right: auto;
+}
+#fixbtn #scrolltop a{
+	height: 40px;
+	width: 40px;
+}
+#fixbtn #scrolltop a:before{
+	top: 17px;
+	left: 3px;
+	transform: rotate(45deg);
+	transition: 0.2s ease-in-out;
+	border-left: 2px solid #463b2e;
+	border-top: 2px solid #463b2e;
+	width: 30px;
+	height: 30px;
+}
+#fixbtn #scrolltop a:hover:before{
+	opacity: 0.7;
+}
+/*▼ TEL、予約ボタンない = 追従フッター有効でない場合*/
+#fixbtn.no #scrolltop a:before{
+	border-color: rgba(120,120,120,0.6) ;
+}
+#fixbtn.no #scrolltop a:hover:before{
+	border-left: 2px solid rgba(120,120,120,1);
+
+	border-top: 2px solid rgba(120,120,120,1);
+}
+
+@media screen and (max-width: 600px){
+	#fixbtn{
+		margin-bottom: 0;
+	}
+	#fixbtn,
+	#fixbtn .fixbtntel a,
+	#fixbtn .fixbtntel span{
+		font-size: 1.7rem;
+	}
+	#fixbtn .fixbtntel a,
+	#fixbtn .fixbtntel span{
+		font-size: 2rem;
+	}
+	#fixbtn .fixbtntel svg{
+		width: 18px;
+		height: 18px;
+	}
+	#fixbtn .contents_btn01 a{
+		padding: 0;
+		letter-spacing: 0;
+	}
+	#fixbtn .contents_btn01 a:before{
+		display: none;
+	}
+	#fixbtn .contents_btn01 a span{
+		padding: 7px 10px 8px;
+	}
+}
+footer{
+	background: #f1eae2;
+	padding: 0;
+	color: #463b2e;
+	text-align: center;
+	font-size: 1.35rem;
+}
+footer a{
+	color: #463b2e;
+}
+footer nav li{
+	letter-spacing: 0.2rem;
+	padding: 5px 0;
+}
+footer nav li a{
+	font-weight: 600 !important;
+	letter-spacing: 0.3rem;
+}
+footer .logo{
+	width: 150px;
+}
+footer .sns{
+	margin: 0 auto 30px;
+}
+footer .sns svg{
+	width: 40px;
+	height: 40px;
+	padding: 10px 10px;
+	fill: #463b2e;
+	transition: 0.2s ease-in-out;
+}
+footer .sns a:hover svg{
+	opacity: 0.8;
+}
+#cp{
+	padding: 10px 0;
+	font-size: 1.1rem;
+	letter-spacing: 0.1rem;
+	color: #463b2e;
+	border-top: 1px solid rgba(0, 0, 0, 0.13);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.13) inset;
+}
+@media screen and (max-width: 600px){
+	footer{
+		padding: 0 0 20px;
+	}
+}
+@media screen and (max-width: 600px){
+	footer{
+		background-position: center;
+	}
+	footer nav ul{
+		border-bottom: 1px solid rgba(0,0,0,0.13);
+	}
+	footer nav ul li{
+		border-top: 1px solid rgba(255,255,255,0.1);
+		border-bottom: 1px solid rgba(0,0,0,0.13);
+	}
+	footer nav ul li:nth-last-of-type(2n){
+		border-right: 1px solid rgba(0,0,0,0.13);
+	}
+	footer nav ul li:nth-last-of-type(2n+1){
+		border-left: 1px solid rgba(255,255,255,0.1);
+	}
+	footer nav ul li:nth-of-type(1),
+	footer nav ul li:nth-of-type(1),
+	footer nav ul li:nth-of-type(2),
+	footer nav ul li:nth-of-type(3):nth-last-of-type(2n-1){
+		border-top: 1px solid rgba(0,0,0,0.13);
+	}
+	footer nav ul li:nth-last-of-type(1),
+	footer nav ul li:nth-last-of-type(2){
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+	footer .logo{
+		width: 140px;
+	}
+	#fixbtn .fixbtnwrap{
+		border-bottom: none;
+	}
+	#fixbtn .inner{
+		padding: 0;
+	}
+}
+

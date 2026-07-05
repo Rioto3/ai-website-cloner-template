@@ -1,0 +1,18 @@
+/*----------------------------widget_news02----------------------------*/
+
+.block_news_2 li{
+	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.05) !important;
+}
+.block_news_2 li a{
+	padding: 30px;
+}
+/*.block_news_2 li a:after{
+	border: 0 solid #f6f1ea !important;
+}*/
+.block_news_2 li a:hover:after{
+	border-width: 10px !important;;
+}
+/*.block_news_2 li:nth-child(2n) {
+	background: #fff !important;
+}
+*/

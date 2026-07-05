@@ -1,0 +1,247 @@
+/*--------------------------------MV--------------------------------*/
+
+#mv_outer{
+	/*mvに背景とかはここを利用する*/
+	position: relative;
+}
+#mv{
+	width: 100%;
+	height: 78vh;
+	min-height: 500px;
+}
+#mv:after{
+	/*スライドに重ねる色*/
+	pointer-events: none;
+	width: 85%;
+	margin-left:10%;
+	background: -moz-linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.05) 60%, transparent);
+	background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.05) 60%, transparent);
+	background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.05) 60%, transparent);
+}
+#mv .mv_img{
+	width: 85%;
+	margin-left:10%;
+}
+#mv .mv_text{
+	height: 90%;
+	align-items: flex-end;/*垂直方向中央*/
+	/*text-shadow: 0 0 5px var(--i_shadow_color);*/
+	width: 100% !important;
+	left: 0 !important;
+	bottom: 10% !important;
+}
+#mv .mv_text>div{
+	max-width: none !important;
+	box-sizing: border-box;
+	width: 90%;
+	position: relative;
+}
+#mv .mv_text h2{
+	font-size: 60px;/* ←max-font-size的意味合いで使用する。動作はjs。*/
+	line-height: 1.1;
+	letter-spacing: 0.3rem;
+	font-weight: 600;
+	font-size: 3.8rem !important;
+	position: relative;
+	display: inline-block;
+	padding-top: 85px;
+}
+#mv .mv_text h2:before{
+	position: absolute;
+	display: block;
+	content: "HAIR SALON";
+	font-family: 'Roboto', sans-serif;
+	font-size: 6.5rem;
+	top: 0;
+	left: 0;
+	right: 0;
+	color: var(--i_main_color);
+	pointer-events: none;
+	font-weight: 500;
+	letter-spacing: 0.5rem;
+}
+#mv .mv_text p{
+	padding-top: 15px;
+	font-size: 2rem;
+	font-weight:600;
+	letter-spacing: 0.2rem;
+}
+#mv .mv_scroll {
+	width: 3px;
+	height: auto;
+	position: absolute;
+	right: 50px;
+	left: auto;
+	bottom:0;
+}
+#mv .mv_scroll a{
+	-webkit-writing-mode: vertical-lr;
+	-ms-writing-mode: tb-lr;
+	writing-mode: vertical-lr;
+	letter-spacing: 0.6em;
+	font-size: 10px;
+	position: relative;
+	padding-bottom: 100px;
+	height: auto;
+	width: auto;
+	text-indent: 0;
+	potision: relative;
+	transition: all .3s ease-in-out;
+	text-align: right;
+	font-weight: 700;
+	color: #333 !important;
+}
+#mv .mv_scroll a::before {
+	width: 1px;
+	height: 70px;
+	transform: none;
+	position: absolute;
+	bottom: 0;
+	left: 1px;
+	top: auto;
+	background: #463b2e;
+	transition: all .3s ease-in-out;
+}
+#mv .mv_scroll a:hover{
+	padding-bottom: 80px;
+}
+#mv .mv_scroll a:hover::before{
+	height: 50px;
+}
+#mv .mv_scroll a:hover::after{
+	height: 25px;
+}
+#mv .mv_arrow {
+	display: none;
+}
+#mv .mv_pointer{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 100px;
+	bottom:auto;
+	left: 0;
+	padding: 0;
+}
+#mv .mv_pointer li{
+	display: block;
+	height: 40px;
+	margin: 0;
+	counter-increment: mvImg;
+}
+#mv .mv_pointer li:after{
+	content: "0" counter(mvImg);
+	position: absolute;
+	left: 100px;
+	opacity: 0.5;
+	transition: 0.8s ease-in-out;
+	font-size: 0.9em;
+	letter-spacing: 0.2rem;
+}
+#mv .mv_pointer li.current:after{
+	opacity: 0.8;
+	font-weight: normal;
+}
+#mv .mv_pointer li:before{
+	background: rgba(180,180,180,0);
+	width: 40px;
+	height: 1px;
+	position:absolute;
+	transition: all 0.8s cubic-bezier(0.47, 0, 0.745, 0.715);
+	margin-top: 13px;
+}
+#mv .mv_pointer li.current:before{
+	width: 80px;
+	background: rgba(180,180,180,1);
+}
+@media screen and (min-width: 901px){
+	#mv_outer{
+		padding-top: 20px;
+	}
+}
+@media screen and (max-width: 100vh){
+	#mv{
+		height: 65vh;
+	}
+}
+@media screen and (max-width: 1300px){
+	#mv .mv_pointer li:before{
+		width: 20px;
+	}
+	#mv .mv_pointer li.current:before{
+		width: 40px;
+	}
+	#mv .mv_pointer li:after{
+		left: 60px;
+	}
+	#mv .mv_scroll{
+		right: 20px;
+	}
+}
+@media screen and (max-width: 800px){
+	#mv .mv_text p{
+		font-size: 1.75rem;
+		letter-spacing: 0.1rem;
+	}
+	#mv .mv_pointer{
+		/*text-align: center;*/
+		top: 60px;
+	}
+	#mv .mv_text > div{
+		width: 95%;
+	}
+	#mv .mv_scroll{
+		display: none;
+	}
+	#mv .mv_pointer li:before{
+		width: 0px;
+	}
+	#mv .mv_pointer li.current:before{
+		width: 10px;
+	}
+	#mv .mv_pointer li:after{
+		left: 20px;
+	}
+	#mv .mv_text h2{
+		padding-top: 65px;
+	}
+	#mv .mv_text h2::before{
+		font-size: 4.8rem;
+	}
+	#mv .mv_text p{
+		padding-top: 10px;
+	}
+}
+@media screen and (max-width: 600px){
+	#mv .mv_text h2{
+		font-size: 6vw !important;
+		letter-spacing: 0.1rem;
+		line-height: 1.5;
+	}
+	#mv .mv_img{
+		width: 80%;
+		margin-left: 15%;
+	}
+	#mv:after{
+		/*スライドに重ねる色*/
+		width: 80%;
+		margin-left: 15%;
+	}
+}
+@media screen and (max-width: 480px){
+	#mv::after {
+		pointer-events: none;
+		width: 100%;
+		margin-left: 0%;
+		background: -moz-linear-gradient(to top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.05) 60%, transparent);
+		background: -webkit-linear-gradient(to top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.05) 60%, transparent);
+		background: linear-gradient(to top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.05) 60%, transparent);
+	}
+	#mv .mv_text h2::before{
+		font-size: 3.5rem;
+	}
+	#mv .mv_text h2{
+		padding-top: 52px;
+	}
+}
+

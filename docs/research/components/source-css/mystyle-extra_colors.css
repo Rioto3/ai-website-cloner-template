@@ -1,0 +1,67 @@
+/*------------------追記CSS------------------------*/
+/*------------------追記_画像にのせる色------------------------*/
+
+.composite_box01.block_images_7 .inner_item_txt{
+	background: rgba(128,178,127,0.8) ;
+}
+.composite_box01.block_images_7 .inner_item a:hover .inner_item_txt {
+    background: rgba(128,178,127,0.4) ;
+}
+
+/*テキスト枠*/
+#text+section .content_wrapper{
+	position: relative;
+	background: #f6f1ea;
+	padding: 50px 40px;
+	/*box-shadow: 0 0 6px var(--i_shadow_color);*/
+}
+#text+section .contents_btn01 .content_wrapper{
+	padding: 0px;
+}
+#text+section .contents_btn01 .content_wrapper::after {
+    display: none;
+}
+#text+section .content_wrapper::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    z-index: -1;
+    border: 2px solid #f6f1ea;
+}
+@media screen and (max-width: 1200px){
+	#text+section .content_wrapper{
+		margin-left: 5%;
+    	margin-right: 5%;
+    	width: 90%;
+	}
+}
+@media screen and (max-width: 600px){
+	#text+section .content_wrapper{
+		padding: 30px 20px;
+	}
+}
+
+/*------------------パララックス背景(白)------------------------*/
+
+#parallax+div .parallax_img,
+#parallax2+section .parallax_img{
+	filter: brightness(100%) blur(3px);
+	opacity: 0.2;
+}
+/*------------------色付きパララックス------------------------*/
+#pra+section .parallax_img,
+#service_h2+section .parallax_img{
+	opacity: 0.4;
+	filter:  brightness(100%) blur(3px) ;
+	mix-blend-mode: multiply;
+}
+#pra+section,
+#service_h2+section{
+	background: #80b27f;
+}
+
+#service+div {

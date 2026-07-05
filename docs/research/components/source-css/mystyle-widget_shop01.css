@@ -1,0 +1,10 @@
+/*----------------------------widget_shop01----------------------------*/
+
+.widget_staff01 .inner_item a:hover *{
+	opacity: 0.8;
+}
+.widget_staff01 .sub{
+	font-size: 1.2rem;
+	font-weight: normal;
+}
+

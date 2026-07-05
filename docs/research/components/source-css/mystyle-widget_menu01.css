@@ -1,0 +1,25 @@
+/*----------------------------widget_menu01----------------------------*/
+
+.widget_menu01 h3{
+	vertical-align: central;
+	font-size: 1.7rem;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+.widget_menu01 li dd{
+	font-size: 1.3rem;
+	letter-spacing: 0;
+}
+
+/*----------------------------widget_menu02----------------------------*/
+
+.widget_menu02 h3{
+	vertical-align: central;
+	font-size: 1.7rem;
+	letter-spacing: 1px;
+}
+.widget_menu02 li>p{
+	font-size: 1.3rem;
+	letter-spacing: 0;
+}
+

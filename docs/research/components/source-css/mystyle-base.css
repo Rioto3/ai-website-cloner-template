@@ -1,0 +1,115 @@
+/*------------------------------------------------------------------*/
+/*-----------------------------base---------------------------------*/
+/*------------------------------------------------------------------*/
+
+html{
+	font-size: 62.5%;
+}
+body{
+	font-size: 1.65rem;
+	line-height: 1.9;
+	letter-spacing: 0.02rem;
+	-webkit-text-size-adjust: 100%;
+	color: var(--i_txt_color);
+	font-weight: 500; 
+}
+body{
+	background: #fff;
+}
+@media all and (-ms-high-contrast: none) {
+  *::-ms-backdrop, main {
+	/* IE11 にのみ適用される */
+	  display: block;
+  }
+}
+@media screen and (max-width: 850px){
+	html{
+		font-size: 60.606%;
+	}
+	body{
+		letter-spacing: 0px;
+	}
+}
+@media all and (-ms-high-contrast: none) {
+  *::-ms-backdrop, main {
+	/* IE11 にのみ適用される */
+	  display: block;
+  }
+}
+a{
+	outline: 0;
+	text-decoration: none;
+	color: var(--i_txt_color);
+}
+section[style*=" color:"]:not([style*=" color: inherit"]) a,
+div[style*=" color:"]:not([style*=" color: inherit"]) a{
+	color: inherit;
+}
+/*composite_boxの最大高さとトリミングの起点*/
+/*基本はjsにより各カラム中から最大の画角に設定*/
+.composite_box01 .inner_item_img img{
+	object-position: 50% 50%;
+	font-family: 'object-position: 50% 50%;';
+}
+
+@media screen and (max-width: 850px){
+	#sidebar{
+		border: 5px solid #f6f1ea !important;
+	}
+}
+.no_img{
+	background: var(--i_noimg_bg_color, rgba(200,200,200,0.3));
+}
+
+/*----------------------------loader----------------------------*/
+
+#load div:nth-of-type(1){
+	background: #fff;
+}
+#load .loader,
+.popup .loader{
+	border: 1px solid var(--i_main_color);/*★*/
+}
+#load .loader,
+#load .loader::before,
+.popup .loader,
+.popup .loader::before{
+	border-top-color: var(--i_main_color);
+}
+#load .loader::before,
+#load .loader::after,
+.popup .loader::before,
+.popup .loader::after{/*★*-1*/
+	left: -1px;
+	top: -1px;
+}
+
+#load img{
+	max-width: 60px;
+}
+#load .loader,
+.popup .loader{
+	border: 1px solid var(--i_main_color);/*★*/
+}
+#load .loader,
+#load .loader::before,
+.popup .loader,
+.popup .loader::before{
+	border-top-color: #80b27f !important;
+}
+#load .loader::before,
+#load .loader::after,
+.popup .loader::before,
+.popup .loader::after{/*★*-1*/
+	left: -1px;
+	top: -1px;
+}
+#load img{
+	max-width: 180px;
+}
+@media screen and (max-width: 650px){
+	#load img{
+		max-width: 130px;
+	}
+}
+
