@@ -18,20 +18,26 @@ const SLIDES: Slide[] = [
 const AUTO_ADVANCE_MS = 4900;
 const ZOOM_ANIMATION_MS = 7000;
 
+interface SliderState {
+  current: number;
+  zCounter: number;
+  zIndexMap: Record<number, number>;
+}
+
 export function HeroSlider() {
-  const [current, setCurrent] = useState(0);
   const [mounted, setMounted] = useState(false);
-  const [zCounter, setZCounter] = useState(0);
-  const zIndexMapRef = useRef<Record<number, number>>({ 0: 1 });
+  const [{ current, zCounter, zIndexMap }, setSlider] = useState<SliderState>({
+    current: 0,
+    zCounter: 1,
+    zIndexMap: { 0: 1 },
+  });
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const goToSlide = useCallback((index: number) => {
-    setZCounter((prevZ) => {
-      const nextZ = prevZ + 1;
-      zIndexMapRef.current[index] = nextZ + 1;
-      return nextZ;
+    setSlider((prev) => {
+      const nextZ = prev.zCounter + 1;
+      return { current: index, zCounter: nextZ, zIndexMap: { ...prev.zIndexMap, [index]: nextZ } };
     });
-    setCurrent(index);
   }, []);
 
   const startInterval = useCallback(() => {
@@ -39,14 +45,10 @@ export function HeroSlider() {
       clearInterval(intervalRef.current);
     }
     intervalRef.current = setInterval(() => {
-      setCurrent((prevCurrent) => {
-        const next = (prevCurrent + 1) % SLIDES.length;
-        setZCounter((prevZ) => {
-          const nextZ = prevZ + 1;
-          zIndexMapRef.current[next] = nextZ + 1;
-          return nextZ;
-        });
-        return next;
+      setSlider((prev) => {
+        const next = (prev.current + 1) % SLIDES.length;
+        const nextZ = prev.zCounter + 1;
+        return { current: next, zCounter: nextZ, zIndexMap: { ...prev.zIndexMap, [next]: nextZ } };
       });
     }, AUTO_ADVANCE_MS);
   }, []);
@@ -82,7 +84,7 @@ export function HeroSlider() {
         <ul className="w-[85%] ml-[10%] h-full overflow-hidden relative z-[6] max-[600px]:w-[80%] max-[600px]:ml-[15%]">
           {SLIDES.map((slide, index) => {
             const isActive = index === current;
-            const z = zIndexMapRef.current[index] ?? 0;
+            const z = zIndexMap[index] ?? 0;
             return (
               <li
                 key={index}
