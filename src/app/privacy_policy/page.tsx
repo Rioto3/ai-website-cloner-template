@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import { PageHeroBanner } from "@/components/PageHeroBanner";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { RelatedPosts } from "@/components/RelatedPosts";
 import { RelatedTags } from "@/components/RelatedTags";
+
+export const metadata: Metadata = {
+  title: "プライバシーポリシー",
+  description: "仙台市の理容室はHIAR T.Tのプライバシーポリシーページです。",
+};
 
 const headingCls =
   "mb-3 flex items-center gap-2 text-[17px] font-semibold before:content-[''] before:block before:h-[6px] before:w-[6px] before:rounded-full before:border-[3px] before:border-tt-green";

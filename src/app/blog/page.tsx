@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BLOG_POSTS_BY_DATE, BLOG_TAGS } from "@/data/blog";
@@ -5,6 +6,11 @@ import { PageHeroBanner } from "@/components/PageHeroBanner";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { BlogSidebar } from "@/components/BlogSidebar";
+
+export const metadata: Metadata = {
+  title: "ブログ",
+  description: "実力派のベテランスタイリストが様々な内容を発信します。HIAR T.Tのブログ一覧。",
+};
 
 export default function Page() {
   return (

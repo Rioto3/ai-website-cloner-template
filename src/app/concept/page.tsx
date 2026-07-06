@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { PageHeroBanner } from "@/components/PageHeroBanner";
@@ -7,6 +8,11 @@ import { Reveal } from "@/components/Reveal";
 import { SectionButton } from "@/components/SectionButton";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SubHeading } from "@/components/SubHeading";
+
+export const metadata: Metadata = {
+  title: "コンセプト",
+  description: "プロの技で洗練されたかっこいいスタイルに。HIAR T.Tのコンセプトをご紹介します。",
+};
 
 export default function ConceptPage() {
   return (

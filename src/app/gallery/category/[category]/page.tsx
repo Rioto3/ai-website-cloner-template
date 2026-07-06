@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { PageHeroBanner } from "@/components/PageHeroBanner";
@@ -7,6 +8,19 @@ import { GALLERY_CATEGORIES, GALLERY_ITEMS } from "@/data/gallery";
 
 export function generateStaticParams() {
   return GALLERY_CATEGORIES.map((c) => ({ category: encodeURIComponent(c.replace(/ /g, "+")) }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ category: string }>;
+}): Promise<Metadata> {
+  const { category } = await params;
+  const decoded = decodeURIComponent(category).replace(/\+/g, " ");
+  return {
+    title: `${decoded}のギャラリー`,
+    description: `${decoded}の施術スタイル一覧。HIAR T.Tのギャラリーページです。`,
+  };
 }
 
 export default async function Page({ params }: { params: Promise<{ category: string }> }) {

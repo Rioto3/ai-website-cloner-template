@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { PageHeroBanner } from "@/components/PageHeroBanner";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SubHeading } from "@/components/SubHeading";
+
+export const metadata: Metadata = {
+  title: "お客様の声",
+  description: "ヘアスタイルから身だしなみまでプロの技で洗練されたイケメンに。お客様からいただいた声をご紹介します。",
+};
 
 export default function VoicePage() {
   return (

@@ -1,16 +1,19 @@
-"use client";
-
-import { useState } from "react";
+import type { Metadata } from "next";
 import { PageHeroBanner } from "@/components/PageHeroBanner";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { RelatedPosts } from "@/components/RelatedPosts";
 import { RelatedTags } from "@/components/RelatedTags";
+import { ContactForm } from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "お問い合わせ",
+  description:
+    "HIAR T.Tへのお問い合わせはこちら。ご希望やお悩みをお気軽にご相談ください。",
+};
 
 export default function Page() {
-  const [submitted, setSubmitted] = useState(false);
-
   return (
     <>
       <PageHeroBanner title="お問い合わせ" image="/images/banners/contact.jpg" />
@@ -45,57 +48,7 @@ export default function Page() {
 ご本人である事を確認のうえ、対応させて頂きます。
 個人情報の開示･訂正･削除・利用停止の具体的手続きにつきましては、お電話でお問合せ下さい。`}
           </div>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSubmitted(true);
-            }}
-            className="space-y-6"
-          >
-            <div>
-              <label className="block mb-2">
-                お名前<span className="text-red-600">※</span>
-              </label>
-              <input required className="w-full border border-tt-border bg-tt-beige px-4 py-3" />
-            </div>
-            <div>
-              <label className="block mb-2">お電話番号</label>
-              <input className="w-full border border-tt-border bg-tt-beige px-4 py-3" />
-            </div>
-            <div>
-              <label className="block mb-2">
-                メールアドレス<span className="text-red-600">※</span>
-              </label>
-              <input
-                required
-                type="email"
-                className="w-full border border-tt-border bg-tt-beige px-4 py-3"
-              />
-            </div>
-            <div>
-              <label className="block mb-2">
-                お問い合わせ内容<span className="text-red-600">※</span>
-              </label>
-              <textarea
-                required
-                rows={6}
-                className="w-full border border-tt-border bg-tt-beige px-4 py-3"
-              />
-            </div>
-            <div className="text-center pt-4">
-              <button
-                type="submit"
-                className="inline-block w-[220px] border border-tt-btn text-tt-btn px-5 py-3 font-semibold transition-colors duration-300 hover:bg-tt-btn hover:text-white"
-              >
-                入力内容を確認する
-              </button>
-            </div>
-            {submitted && (
-              <p className="text-center text-tt-green pt-4">
-                ご入力ありがとうございます（デモフォームのため送信はされません）
-              </p>
-            )}
-          </form>
+          <ContactForm />
         </div>
       </Reveal>
       <RelatedPosts

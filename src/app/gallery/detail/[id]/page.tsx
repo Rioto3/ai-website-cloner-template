@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { GALLERY_ITEMS, getGalleryItem, getGalleryNeighbors } from "@/data/gallery";
@@ -8,6 +9,19 @@ import { PagerNav } from "@/components/PagerNav";
 
 export function generateStaticParams() {
   return GALLERY_ITEMS.map((item) => ({ id: item.id }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const item = getGalleryItem(id);
+  return {
+    title: item ? `${item.title}のギャラリー` : "ギャラリー",
+    description: item ? `${item.title}｜${item.category}の施術スタイル紹介。` : undefined,
+  };
 }
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {

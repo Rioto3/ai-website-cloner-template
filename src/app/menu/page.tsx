@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -8,6 +9,11 @@ import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SubHeading } from "@/components/SubHeading";
 import type { MenuItemData } from "@/types";
+
+export const metadata: Metadata = {
+  title: "メニュー",
+  description: "周りに差をつけるかっこいいヘアスタイルを実現。カット、ヘッドスパ、シェービングなどメニュー一覧。",
+};
 
 const CUT_MENU_ITEMS: MenuItemData[] = [
   {

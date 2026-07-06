@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHeroBanner } from "@/components/PageHeroBanner";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -6,6 +7,11 @@ import { SubHeading } from "@/components/SubHeading";
 import { Reveal } from "@/components/Reveal";
 import { RelatedTags } from "@/components/RelatedTags";
 import { ShopInfoSection } from "@/components/ShopInfoSection";
+
+export const metadata: Metadata = {
+  title: "アクセス",
+  description: "駐車場がありお車でも気軽にお越しいただけます。中野栄駅や陸前高砂駅から徒歩圏内でプライベートサロンを営業。",
+};
 
 export default function Page() {
   return (

@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { PageHeroBanner } from "@/components/PageHeroBanner";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { GALLERY_ITEMS } from "@/data/gallery";
+
+export const metadata: Metadata = {
+  title: "ギャラリー",
+  description: "最新トレンドを取り入れながら似合う髪型をご提案。これまでの施術スタイルをご紹介します。",
+};
 
 export default function Page() {
   return (

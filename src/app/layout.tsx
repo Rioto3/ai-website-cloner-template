@@ -15,8 +15,14 @@ const title =
 const description =
   "クラシックなアメリカンスタイルの理容室・HIAR T.Tを仙台市に構え、数々のコンテストで優勝した経験を持つスタイリスト歴30年以上のベテランスタイリストがお客様のなりたいイメージをしっかり形にしております。";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title,
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: "%s | HAIR T.T",
+  },
   description,
   keywords: "仙台市,理容室",
   icons: {
@@ -30,6 +36,18 @@ export const metadata: Metadata = {
     type: "website",
     siteName: title,
     images: ["/seo/og-image.png"],
+  },
+  // This is a trial/preview deployment of a site clone — keep it out of
+  // search indexes until the owner decides to launch it for real.
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
   },
 };
 

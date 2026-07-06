@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeroBanner } from "@/components/PageHeroBanner";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
+
+export const metadata: Metadata = {
+  title: "サイトマップ",
+  description: "HIAR T.Tウェブサイトのサイトマップです。",
+};
 
 const LINKS = [
   { label: "ホーム", href: "/" },

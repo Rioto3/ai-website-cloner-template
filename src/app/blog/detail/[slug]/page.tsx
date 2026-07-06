@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { BLOG_POSTS, BLOG_POSTS_BY_DATE, BLOG_TAGS, getBlogPost, getBlogNeighbors } from "@/data/blog";
 import { PageHeroBanner } from "@/components/PageHeroBanner";
@@ -9,6 +10,19 @@ import { RelatedTags } from "@/components/RelatedTags";
 
 export function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogPost(slug);
+  return {
+    title: post?.title,
+    description: post?.body[0],
+  };
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {

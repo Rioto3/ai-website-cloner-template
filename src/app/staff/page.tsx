@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { PageHeroBanner } from "@/components/PageHeroBanner";
@@ -5,6 +6,11 @@ import { RelatedPosts } from "@/components/RelatedPosts";
 import { RelatedTags } from "@/components/RelatedTags";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
+
+export const metadata: Metadata = {
+  title: "スタッフ",
+  description: "ひげや眉をデザインし洗練された仕上がりに。HIAR T.Tのスタッフをご紹介します。",
+};
 
 export default function StaffPage() {
   return (
