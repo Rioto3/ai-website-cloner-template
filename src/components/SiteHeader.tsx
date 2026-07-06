@@ -155,7 +155,7 @@ export function SiteHeader() {
             </ul>
           </nav>
 
-          <div className="hidden h-[60px] items-center justify-end gap-[15px] pr-[15px] max-[900px]:flex">
+          <div className="absolute top-0 right-0 hidden h-[60px] items-center justify-end gap-[15px] pr-[15px] max-[900px]:flex">
             <a
               href="#"
               className="flex h-[36px] w-[36px] items-center justify-center"
