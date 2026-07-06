@@ -63,22 +63,22 @@ export function FixedContactBar() {
           shown ? "translate-y-0" : "translate-y-full",
         )}
       >
-        <div className="flex justify-between items-stretch min-h-[60px] max-w-[1200px] mx-auto">
-          <div className="flex items-center px-[15px] py-2 grow border-r border-tt-border max-[480px]:px-[10px] min-w-0">
-            <TelIcon className="w-[22px] h-[22px] mr-[5px] shrink-0 text-tt-text max-[600px]:w-[18px] max-[600px]:h-[18px] max-[480px]:w-[16px] max-[480px]:h-[16px]" />
-            <span className="text-[34px] leading-none text-tt-text mr-[10px] whitespace-nowrap max-[600px]:text-[20px] max-[480px]:mr-0 max-[480px]:text-[15px]">
+        <div className="flex justify-between items-stretch min-h-[60px] max-w-[1200px] mx-auto max-[480px]:min-h-[48px]">
+          <div className="flex items-center shrink-0 px-[15px] py-2 grow border-r border-tt-border max-[480px]:grow-0 max-[480px]:shrink max-[480px]:px-[8px]">
+            <TelIcon className="w-[22px] h-[22px] mr-[5px] shrink-0 text-tt-text max-[600px]:w-[18px] max-[600px]:h-[18px] max-[480px]:w-[14px] max-[480px]:h-[14px] max-[480px]:mr-[3px]" />
+            <span className="text-[34px] leading-none text-tt-text mr-[10px] shrink-0 whitespace-nowrap max-[600px]:text-[20px] max-[480px]:mr-0 max-[480px]:text-[13px]">
               022-352-3957
             </span>
             <p className="text-[12.5px] leading-[1.2] max-[480px]:hidden">
               [営業時間] 9:00 〜 19:00 / [定休日] 月
             </p>
           </div>
-          <div className="flex items-center gap-2 px-[15px] py-2 max-[480px]:gap-1 max-[480px]:px-[6px]">
+          <div className="flex items-center shrink-0 gap-2 px-[15px] py-2 max-[480px]:gap-[3px] max-[480px]:px-[4px]">
             <a
               href="/contact/"
               className="bg-tt-btn border border-tt-btn transition-colors duration-[400ms] hover:bg-transparent group"
             >
-              <span className="block whitespace-nowrap text-white text-[15px] leading-[1.6] px-5 pt-[10px] pb-[11px] max-[600px]:px-[10px] max-[600px]:pt-[7px] max-[600px]:pb-2 max-[480px]:px-[8px] max-[480px]:py-[6px] max-[480px]:text-[11px] group-hover:text-tt-btn">
+              <span className="block whitespace-nowrap text-white text-[15px] leading-[1.6] px-5 pt-[10px] pb-[11px] max-[600px]:px-[10px] max-[600px]:pt-[7px] max-[600px]:pb-2 max-[480px]:px-[6px] max-[480px]:py-[5px] max-[480px]:text-[10px] group-hover:text-tt-btn">
                 お問い合わせはこちら
               </span>
             </a>
@@ -88,7 +88,7 @@ export function FixedContactBar() {
               rel="noopener noreferrer"
               className="bg-tt-btn border border-tt-btn transition-colors duration-[400ms] hover:bg-transparent group"
             >
-              <span className="block whitespace-nowrap text-white text-[15px] leading-[1.6] px-5 pt-[10px] pb-[11px] max-[600px]:px-[10px] max-[600px]:pt-[7px] max-[600px]:pb-2 max-[480px]:px-[8px] max-[480px]:py-[6px] max-[480px]:text-[11px] group-hover:text-tt-btn">
+              <span className="block whitespace-nowrap text-white text-[15px] leading-[1.6] px-5 pt-[10px] pb-[11px] max-[600px]:px-[10px] max-[600px]:pt-[7px] max-[600px]:pb-2 max-[480px]:px-[6px] max-[480px]:py-[5px] max-[480px]:text-[10px] group-hover:text-tt-btn">
                 ご予約はこちら
               </span>
             </a>
@@ -96,9 +96,9 @@ export function FixedContactBar() {
           <a
             href="#top"
             aria-label="ページトップへ移動"
-            className="w-10 h-10 self-center relative mr-[15px] shrink-0 max-[480px]:w-6 max-[480px]:mr-[8px]"
+            className="w-10 h-10 self-center relative mr-[15px] shrink-0 max-[480px]:hidden"
           >
-            <span className="absolute top-[17px] left-[3px] w-[30px] h-[30px] border-l-2 border-t-2 border-tt-text rotate-45 transition-opacity duration-200 hover:opacity-70 max-[480px]:top-[9px] max-[480px]:left-[1px] max-[480px]:w-[18px] max-[480px]:h-[18px]" />
+            <span className="absolute top-[17px] left-[3px] w-[30px] h-[30px] border-l-2 border-t-2 border-tt-text rotate-45 transition-opacity duration-200 hover:opacity-70" />
           </a>
         </div>
       </div>

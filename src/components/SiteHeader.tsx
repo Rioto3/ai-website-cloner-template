@@ -188,7 +188,6 @@ export function SiteHeader() {
                   menuOpen && "translate-y-[-6px] -rotate-45",
                 )}
               />
-              <span className="mt-[2px] text-[10px] text-tt-text">Menu</span>
             </button>
           </div>
         </div>

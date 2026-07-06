@@ -2,7 +2,6 @@ import Image from "next/image";
 import { FixedContactBar } from "@/components/FixedContactBar";
 
 const NAV_LINKS = [
-  { label: "ホーム", href: "/" },
   { label: "コンセプト", href: "/concept/" },
   { label: "メニュー", href: "/menu/" },
   { label: "ギャラリー", href: "/gallery/" },
