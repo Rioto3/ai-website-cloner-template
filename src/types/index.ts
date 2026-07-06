@@ -46,3 +46,23 @@ export interface ShopInfoRow {
   label: string;
   value: string | string[];
 }
+
+export interface GalleryItem {
+  id: string;
+  title: string;
+  category: "メンズ ショート" | "メンズ ベリーショート" | "メンズ ミディアム";
+  images: string[];
+  imageLabels: string[];
+  styleMenu: string[];
+  stylistComment: string;
+  styleData: { length: string; color: string; image: string };
+}
+
+export interface BlogPostFull {
+  slug: string;
+  date: string;
+  title: string;
+  image: string;
+  body: string[];
+  tags: string[];
+}
