@@ -15,7 +15,7 @@ const title =
 const description =
   "クラシックなアメリカンスタイルの理容室・HIAR T.Tを仙台市に構え、数々のコンテストで優勝した経験を持つスタイリスト歴30年以上のベテランスタイリストがお客様のなりたいイメージをしっかり形にしております。";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hairtt-clone.tubeclip.workers.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
