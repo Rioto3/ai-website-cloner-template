@@ -27,6 +27,10 @@ export function GameCenter() {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [started, setStarted] = useState(false);
   const [resultScore, setResultScore] = useState<number | null>(null);
+  // The game posts its first message (getdata) as soon as its scripts load and
+  // stalls forever if unanswered, so the iframe must not start loading until
+  // the message listener below is registered.
+  const [listenerReady, setListenerReady] = useState(false);
 
   const handleMessage = useCallback((event: MessageEvent) => {
     const msg = (event.data ?? {}) as GameMessage;
@@ -72,6 +76,7 @@ export function GameCenter() {
 
   useEffect(() => {
     window.addEventListener("message", handleMessage);
+    setListenerReady(true);
     return () => window.removeEventListener("message", handleMessage);
   }, [handleMessage]);
 
@@ -94,7 +99,7 @@ export function GameCenter() {
       <iframe
         ref={iframeRef}
         className="c-n-game-center__game"
-        src={GAME_SRC}
+        src={listenerReady ? GAME_SRC : undefined}
       />
       {resultScore !== null && (
         <GameResultPanel
