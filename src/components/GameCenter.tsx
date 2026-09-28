@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { GameMessage } from "@/types/game";
-import { GameResultPanel } from "@/components/GameResultPanel";
 
 const GAME_SRC = "/game/magicslide/game.html?0000-00-00%2000%3A00%3A00";
 const SAVE_KEY = "magicslide-gamedata";
@@ -18,13 +17,12 @@ const FORWARDED_KEYS = [
 ];
 
 /**
- * Center game area: start overlay + game iframe + result panel.
+ * Center game area: just the game iframe.
  * Implements the parent side of the gamebox.iframe.js postMessage protocol
  * (see docs/research/BEHAVIORS.md) with mocked success responses.
  */
 export function GameCenter() {
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const [resultScore, setResultScore] = useState<number | null>(null);
   // The game posts its first message (getdata) as soon as its scripts load and
   // stalls forever if unanswered, so the iframe must not start loading until
   // the message listener below is registered.
@@ -45,7 +43,8 @@ export function GameCenter() {
         reply({ status: "success", key: "clone" });
         break;
       case "end":
-        setResultScore(typeof msg.score === "number" ? msg.score : 0);
+        // The game shows its own result/game-over screen and resumes on its
+        // own once this resolves — no shell-level UI needed on top of it.
         reply({ status: "success" });
         break;
       case "save":
@@ -101,12 +100,6 @@ export function GameCenter() {
         className="c-n-game-center__game"
         src={listenerReady ? GAME_SRC : undefined}
       />
-      {resultScore !== null && (
-        <GameResultPanel
-          score={resultScore}
-          onContinueWithoutLogin={() => setResultScore(null)}
-        />
-      )}
     </main>
   );
 }
