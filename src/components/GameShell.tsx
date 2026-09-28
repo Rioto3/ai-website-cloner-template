@@ -1,24 +1,13 @@
-"use client";
-
-import { useState } from "react";
 import { GameCenter } from "@/components/GameCenter";
-import { GameHeader } from "@/components/GameHeader";
-import { HowtoModal } from "@/components/GameModals";
 
-/** Full-page game shell — header + game, with the vendor's ad slots and
-    reward/promo panels removed. */
+/** Full-page game shell — just the game, no portal chrome (header, ad
+    slots, reward/promo panels) around it. */
 export function GameShell() {
-  const [howtoOpen, setHowtoOpen] = useState(false);
-
   return (
-    <>
-      <section className="l-n-game l-n-game--radius">
-        <GameHeader onOpenHowto={() => setHowtoOpen(true)} />
-        <div className="l-n-game__main">
-          <GameCenter />
-        </div>
-      </section>
-      <HowtoModal open={howtoOpen} onClose={() => setHowtoOpen(false)} />
-    </>
+    <section className="l-n-game l-n-game--radius">
+      <div className="l-n-game__main">
+        <GameCenter />
+      </div>
+    </section>
   );
 }

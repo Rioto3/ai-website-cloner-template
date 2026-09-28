@@ -235,17 +235,8 @@ h1,h2,h3,p{margin:0}
    footer at the bottom. Standalone on a real mobile viewport that min-width
    causes horizontal overflow and pushes the centered start/result overlays
    off-screen. Since the ad footer no longer exists, drop both constraints. */
+html,body{overflow-x:hidden}
 .l-n-game{min-width:0}
 .l-n-game__main{min-width:0}
-.l-n-game__center{padding-bottom:0}
+.l-n-game__center{min-width:0;padding-bottom:0}
 .c-n-game-center--radius{clip-path:inset(0 round 16px)}
-@media(max-width: 600px){
-  .c-n-game-head{padding:0 8px;gap:8px}
-  .c-n-game-head__left{gap:12px;min-width:0}
-  .c-n-game-head__right{gap:4px}
-  .c-n-game-head__l-info{min-width:0}
-  .c-n-game-head__ttl{font-size:1.4rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .c-n-game-head__bookmark{display:none}
-  .c-n-game-btn{width:auto;padding:6px 10px}
-  .c-n-game-btn .c-n-bookmark-btn__txt{display:none}
-}
