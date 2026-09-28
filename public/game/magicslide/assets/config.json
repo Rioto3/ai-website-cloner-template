@@ -1,0 +1,72 @@
+{
+	
+	"skinPrice" : 2000 ,
+	"podDiamondCount" : 3 ,
+	"diamondScore" : 300 ,
+	"sliceSelectBlockCount" : { "min" : 3 , "max" : 4 } ,
+
+	"level": [		
+		{ "score" : 400 , "type" : [ 0 , 0 , 3 , 94 , 3 ] , "holl" : [ 70 , 20 , 10 ] , "minlow" : 2 , "addscore" : 100 },
+		{ "score" : 800 , "type" : [ 0 , 0 , 2 , 96 , 2 ] , "holl" : [ 70 , 20 , 10 ] , "minlow" : 2 , "addscore" : 200 },
+		{ "score" : 1200 , "type" : [ 5 , 0 , 3 , 89 , 3 ] , "holl" : [ 70 , 20 , 10 ] , "minlow" : 3 , "addscore" : 300 },
+		{ "score" : 1600 , "type" : [ 5 , 0 , 3 , 89 , 3 ] , "holl" : [ 70 , 20 , 10 ] , "minlow" : 3 , "addscore" : 400 },
+		{ "score" : 2000 , "type" : [ 10 , 0 , 3 , 84 , 3 ] , "holl" : [ 70 , 20 , 10 ] , "minlow" : 4 , "addscore" : 500 },
+		{ "score" : 2400 , "type" : [ 10 , 0 , 3 , 84 , 3 ] , "holl" : [ 70 , 20 , 10 ] , "minlow" : 4 , "addscore" : 600 },
+		{ "score" : 2800 , "type" : [ 12 , 0 , 3 , 82 , 3 ] , "holl" : [ 60 , 30 , 10 ] , "minlow" : 4 , "addscore" : 700 },
+		{ "score" : 3200 , "type" : [ 12 , 0 , 3 , 82 , 3 ] , "holl" : [ 60 , 30 , 10 ] , "minlow" : 4 , "addscore" : 800 },
+		{ "score" : 3600 , "type" : [ 15 , 0 , 3 , 79 , 3 ] , "holl" : [ 50 , 30 , 20 ] , "minlow" : 5 , "addscore" : 900 },
+		{ "score" : 4000 , "type" : [ 15 , 0 , 3 , 79 , 3 ] , "holl" : [ 50 , 30 , 20 ] , "minlow" : 5 , "addscore" : 1000 },
+		{ "score" : 4400 , "type" : [ 18 , 0 , 3 , 76 , 3 ] , "holl" : [ 40 , 30 , 30 ] , "minlow" : 5 , "addscore" : 1100 },
+		{ "score" : 4800 , "type" : [ 18 , 0 , 3 , 76 , 3 ] , "holl" : [ 40 , 30 , 30 ] , "minlow" : 5 , "addscore" : 1200 },
+		{ "score" : 5200 , "type" : [ 20 , 0 , 3 , 74 , 3 ] , "holl" : [ 30 , 40 , 30 ] , "minlow" : 5 , "addscore" : 1300 },
+		{ "score" : 5600 , "type" : [ 20 , 0 , 3 , 74 , 3 ] , "holl" : [ 30 , 40 , 30 ] , "minlow" : 5 , "addscore" : 1400 },
+		{ "score" : 6000 , "type" : [ 25 , 0 , 3 , 69 , 3 ] , "holl" : [ 30 , 30 , 40 ] , "minlow" : 5 , "addscore" : 1500 },
+		{ "score" : 6400 , "type" : [ 25 , 0 , 3 , 69 , 3 ] , "holl" : [ 30 , 30 , 40 ] , "minlow" : 5 , "addscore" : 1600 },
+		{ "score" : 6800 , "type" : [ 30 , 0 , 3 , 64 , 3 ] , "holl" : [ 30 , 30 , 40 ] , "minlow" : 5 , "addscore" : 1700 },
+		{ "score" : 7200 , "type" : [ 30 , 0 , 3 , 64 , 3 ] , "holl" : [ 30 , 30 , 40 ] , "minlow" : 5 , "addscore" : 1800 },
+		{ "score" : 7600 , "type" : [ 35 , 0 , 3 , 59 , 3 ] , "holl" : [ 30 , 30 , 40 ] , "minlow" : 5 , "addscore" : 1900 },
+		{ "score" : 8000 , "type" : [ 35 , 0 , 3 , 59 , 3 ] , "holl" : [ 30 , 30 , 40 ] , "minlow" : 5 , "addscore" : 2000 },
+		{ "score" : 8400 , "type" : [ 40 , 0 , 3 , 54 , 3 ] , "holl" : [ 30 , 30 , 40 ] , "minlow" : 5 , "addscore" : 2100 },
+		{ "score" : 8800 , "type" : [ 40 , 0 , 3 , 54 , 3 ] , "holl" : [ 30 , 30 , 40 ] , "minlow" : 5 , "addscore" : 2200 },
+		{ "score" : 9200 , "type" : [ 40 , 0 , 3 , 54 , 3 ] , "holl" : [ 30 , 30 , 40 ] , "minlow" : 5 , "addscore" : 2300 }
+	] ,
+	"skin" : [
+
+		{ "score" : 10 , "rare" : 0 , "probability" : 6.7 } ,
+		{ "score" : 10 , "rare" : 0 , "probability" : 6.7 } ,
+		{ "score" : 10 , "rare" : 0 , "probability" : 6.7 } ,
+		{ "score" : 10 , "rare" : 0 , "probability" : 6.7 } ,
+		
+		{ "score" : 15 , "rare" : 0 , "probability" : 6.7 } ,
+		{ "score" : 15 , "rare" : 0 , "probability" : 6.7 } ,
+		{ "score" : 15 , "rare" : 0 , "probability" : 6.7 } ,
+		{ "score" : 15 , "rare" : 0 , "probability" : 6.7 } ,
+
+		{ "score" : 18 , "rare" : 0 , "probability" : 6.7 } ,
+		{ "score" : 18 , "rare" : 0 , "probability" : 6.7 } ,
+		{ "score" : 18 , "rare" : 0 , "probability" : 6.7 } ,
+		{ "score" : 18 , "rare" : 0 , "probability" : 6.7 } ,
+
+		{ "score" : 25 , "rare" : 1 , "probability" : 3.75 } ,
+		{ "score" : 25 , "rare" : 1 , "probability" : 3.75 } ,
+		{ "score" : 25 , "rare" : 1 , "probability" : 3.75 } ,
+		{ "score" : 25 , "rare" : 1 , "probability" : 3.75 } ,
+
+		{ "score" : 30 , "rare" : 2 , "probability" : 1.25 } ,
+		{ "score" : 30 , "rare" : 2 , "probability" : 1.25 } ,
+		{ "score" : 30 , "rare" : 2 , "probability" : 1.25 } ,
+		{ "score" : 30 , "rare" : 2 , "probability" : 1.25 }
+
+	] ,
+
+	"podGauge" : [ 15 , 20 , 30 , 40 , 50 ],
+
+	"shopPrices" : [ 
+		0 , 0 , 0 , 0 ,
+		500 , 1000 , 2000 , 3000 , 
+		4000 , 5000 , 6000 , 7000 ,
+		8000 , 8000 , 10000 , 20000 ,
+		30000 , 40000 , 50000 , 100000 
+	]
+
+}

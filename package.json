@@ -1,28 +1,8 @@
 {
-  "name": "ai-website-clone-template",
-  "version": "0.3.1",
+  "name": "magic-slide",
+  "version": "0.1.0",
   "private": true,
-  "description": "Clone any website into a clean, modern Next.js codebase using AI coding agents",
-  "author": "JCodesMore",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JCodesMore/ai-website-cloner-template.git"
-  },
-  "homepage": "https://github.com/JCodesMore/ai-website-cloner-template",
-  "bugs": {
-    "url": "https://github.com/JCodesMore/ai-website-cloner-template/issues"
-  },
-  "keywords": [
-    "claude-code",
-    "website-clone",
-    "reverse-engineering",
-    "nextjs",
-    "ai",
-    "template",
-    "tailwindcss",
-    "shadcn-ui"
-  ],
+  "description": "Faithful clone + internalization of a mobile puzzle game (\"Magic Slide\"), run as a standalone Cloudflare Worker",
   "engines": {
     "node": ">=24"
   },
@@ -32,14 +12,19 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "check": "npm run lint && npm run typecheck && npm run build"
+    "check": "npm run lint && npm run typecheck && npm run build",
+    "push": "opennextjs-cloudflare build && wrangler versions upload",
+    "staging": "wrangler versions deploy --yes",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "deploy:domain": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --domain magic-slide.tubeclip.work"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
+    "@opennextjs/cloudflare": "^1.20.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^1.6.0",
-    "next": "16.2.1",
+    "next": "^16.2.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "shadcn": "^4.1.0",

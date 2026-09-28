@@ -1,0 +1,2828 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+
+
+
+
+
+
+
+
+<title>
+            マジックスライド｜ゲーム広場｜ポイント広場    </title>
+
+    <meta name="description" content="無料で遊べるパズルゲーム「マジックスライド」。魔法の世界のブロックパズル ランキングで競える無料ゲームならゲーム広場。カジュアルゲームで遊んでスターが当たる！インストール不要！スマホでも遊べます。">
+
+    <meta name="keywords" content="マジックスライド,パズル,スター,無料ゲーム,ゲーム,スマホゲーム,かんたんゲーム,無料,H5,ゲーム広場">
+
+
+    <meta name="twitter:image" content="https://img.kantangame.com/game/img/plus/game/795_lp.png?v=2026060401004510369045">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@easygamebox">
+
+
+    <meta property="og:title" content="マジックスライド｜ゲーム広場｜ポイント広場">
+    <meta property="og:description" content="無料で遊べるパズルゲーム「マジックスライド」。魔法の世界のブロックパズル ランキングで競える無料ゲームならゲーム広場。カジュアルゲームで遊んでスターが当たる！インストール不要！スマホでも遊べます。">
+    <meta property="og:image" content="https://img.kantangame.com/game/img/plus/game/795_lp.png?v=2026060401004510369045">
+
+<meta property="og:url" content="https://game.hiroba.dpoint.docomo.ne.jp/easygame">
+<meta property="og:type" content="website">
+
+
+    <meta name="apple-mobile-web-app-title" content="マジックスライド｜ゲーム広場｜ポイント広場">
+    <link rel="apple-touch-icon-precomposed" href="//img.kantangame.com/easygame/media-89/pc/img/apple-touch-icon.png?v=2026070617380421723667">
+
+
+    <link rel="shortcut icon" href="//img.kantangame.com/easygame/media-89/pc/img/favicon.ico?v=2026070617380421723667">
+
+    <link rel="canonical" href="https://game.hiroba.dpoint.docomo.ne.jp/easygame/game/795">
+
+
+
+
+    
+    
+
+<style>
+    :root {
+        
+                    
+            
+            
+            
+            
+            
+            --primary: #cf0f31;            
+            --bg-primary: #faf2f5;
+        
+            }
+</style>
+
+
+<link rel="stylesheet" href="//img.kantangame.com/easygame/media-all/pc/css/app.css?v=2026070617380421723667">
+
+    
+    <link rel="stylesheet" href="//img.kantangame.com/quiz/media-89/sp/css/timesale.css">
+    
+
+<script src="//img.kantangame.com/vendor/jquery/jquery-3.7.1.min.js"></script>
+
+
+<script src="/js/toolbox.js?v=2026070617380421723667"></script>
+
+<script type="text/javascript">
+	function fuel_csrf_token()
+	{
+		if (document.cookie.length > 0)
+		{
+			var c_name = "fuel_csrf_token";
+			c_start = document.cookie.indexOf(c_name + "=");
+			if (c_start != -1)
+			{
+				c_start = c_start + c_name.length + 1;
+				c_end = document.cookie.indexOf(";" , c_start);
+				if (c_end == -1)
+				{
+					c_end=document.cookie.length;
+				}
+				return unescape(document.cookie.substring(c_start, c_end));
+			}
+		}
+		return "";
+	}
+</script>
+
+<script>
+    function get_fuel_token() {
+        return {"fuel_csrf_token":fuel_csrf_token()};
+    }
+</script>
+
+
+
+
+
+    
+    
+    
+            
+                <script type="text/javascript" src="/js/sha/sha1.js"></script>
+        <script src="/js/toolbox-easygame.js?v=2026070617380421723667"></script>
+        <script>
+            if (typeof window.easygame === 'undefined') {
+                window.easygame = {};
+            }
+            if (typeof window.easygame.User === 'undefined') {
+                window.easygame.User = {};
+            }
+            window.easygame.User = Object.assign(window.easygame.User, {
+                userId: 'non_insentive_user',
+                mediaId: '89',
+                gameId: '795',
+                isPremium: 0,
+                rewardHistoryCount: 0,
+                rewardMaxCount: 0,
+                healingCount: 0,
+                scorebooster: 0,
+                apiUrl: 'lightgameapi',
+                isLogin: false,
+                isContinuableGame: false,
+                miniappUrl: '',
+                adImgDomain: 'https://img.kantangame.com',
+                isGiftee: false,
+                pointCounter: '枚'
+            });
+            document.addEventListener('DOMContentLoaded', function(event) {
+                window.easygame.init();
+            });
+        </script>
+                                    <script>
+        /* easygame関連 */
+        if (typeof window.easygame === 'undefined') {
+            window.easygame = {};
+        }
+
+        /**
+         * easygameの定数
+         * @type {Object}
+         * @property {number} SCROLL_LOAD_DELAY - スクロールロードの遅延時間
+         * @property {string} LIST_CONTAINER_SELECTOR - ゲームリストのコンテナセレクター
+         */
+        window.easygame.constants = {
+            SCROLL_LOAD_DELAY: 100,
+            LIST_CONTAINER_SELECTOR: '.l-n-card'
+        };
+
+        /**
+         * easygameの状態を管理するオブジェクト
+         * @type {Object}
+         * @property {number} page - 現在のページ番号
+         * @property {boolean} isListLoading - リストのロード中かどうか
+         * @property {boolean} isListLoadDone - リストのロードが完了したかどうか
+         */
+        window.easygame.status = {
+            page: 1,
+            isListLoading: false,
+            isListLoadDone: false,
+        }
+
+        /**
+         * お気に入りリストを取得して表示する
+         * @return {void}
+         * @description
+         * この関数は、AJAXリクエストを使用して
+         * お気に入りリストを取得し、ページ上に表示します。
+         */
+        easygame.getMoreBookmarkList = function() {
+            // すでにリクエスト中またはロード完了の場合は何もしない
+            if (window.easygame.status.isListLoading || window.easygame.status.isListLoadDone) {
+                return;
+            }
+            window.easygame.status.isListLoading = true;
+
+            // リスト要素を取得
+            const bookmarkList = document.querySelector(window.easygame.constants.LIST_CONTAINER_SELECTOR);
+            if (!bookmarkList) {
+                console.warn('getMoreBookmarkList: リストが見つかりません');
+                return;
+            }
+
+            // ローディング表示
+            const gameListLoading = document.querySelector('#gameListLoading');
+            if (gameListLoading) {
+                gameListLoading.style.display = 'block';
+            }
+
+            // AJAXリクエストを送信
+            $.ajax({
+                'url': '/plusapi/bookmark.json',
+                'type': 'GET'
+            })
+            .done(response => {
+                if (!response || !response.list) {
+                    console.error('getMoreBookmarkList: リストの取得に失敗:', response);
+                    return;
+                }
+
+                
+                window.easygame.status.isListLoadDone = true;
+                const moreListBtn = document.querySelector('.js-more-list-btn');
+                if (moreListBtn) {
+                    moreListBtn.style.display = 'none';
+                }
+
+                // 既存のリストをクリア
+                const existingCards = bookmarkList.querySelectorAll('.c-n-card-game');
+                existingCards.forEach(card => card.remove());
+                
+                // 新しいゲームを追加
+                response.list.forEach(game => {
+                    // 新しいカード要素を作成
+                    const card = easygame.createGameCard(game);
+
+                    // お気に入りリストに追加
+                    bookmarkList.appendChild(card);
+                });
+            })
+            .fail(error => {
+                console.error('getMoreBookmarkList: リストの取得に失敗:', error);
+            })
+            .always(() => {
+                // ローディング非表示
+                if (gameListLoading) {
+                    gameListLoading.style.display = 'none';
+                }
+            });
+        },
+        /**
+         * プレイ履歴リストを取得して表示する
+         * @return {void}
+         * @description
+         * この関数は、AJAXリクエストを使用して
+         * プレイ履歴リストを取得し、ページ上に表示します。
+         */
+        easygame.getMoreHistoryList = function() {
+            // すでにリクエスト中またはロード完了の場合は何もしない
+            if (window.easygame.status.isListLoading || window.easygame.status.isListLoadDone) {
+                return;
+            }
+            window.easygame.status.isListLoading = true;
+
+            // リスト要素を取得
+            const historyList = document.querySelector(window.easygame.constants.LIST_CONTAINER_SELECTOR);
+            if (!historyList) {
+                console.warn('getMoreHistoryList: リストが見つかりません');
+                return;
+            }
+
+            // ローディング表示
+            const gameListLoading = document.querySelector('#gameListLoading');
+            if (gameListLoading) {
+                gameListLoading.style.display = 'block';
+            }
+
+            // AJAXリクエストを送信
+            $.ajax({
+                'url': '/plusapi/history.json',
+                'type': 'GET'
+            })
+            .done(response => {
+                if (!response || !response.list) {
+                    console.error('getMoreHistoryList: リストの取得に失敗:', response);
+                    return;
+                }
+
+                
+                window.easygame.status.isListLoadDone = true;
+                const moreListBtn = document.querySelector('.js-more-list-btn');
+                if (moreListBtn) {
+                    moreListBtn.style.display = 'none';
+                }
+
+                // 既存のリストをクリア
+                const existingCards = historyList.querySelectorAll('.c-n-card-game');
+                existingCards.forEach(card => card.remove());
+                
+                // 新しいゲームを追加
+                response.list.forEach(game => {
+                    // 新しいカード要素を作成
+                    const card = easygame.createGameCard(game);
+                    
+                    // プレイ履歴リストに追加
+                    historyList.appendChild(card);
+                });
+            })
+            .fail(error => {
+                console.error('getMoreHistoryList: リストの取得に失敗:', error);
+            })
+            .always(() => {
+                // ローディング非表示
+                if (gameListLoading) {
+                    gameListLoading.style.display = 'none';
+                }
+            });
+        },
+        /**
+         * ゲーム一覧リストを取得して表示する
+         * @return {void}
+         * @description
+         * この関数は、AJAXリクエストを使用して
+         * ゲーム一覧リストを取得し、ページ上に表示します。
+         */
+        easygame.getMoreGameList = function() {
+            // リスト要素を取得
+            const gameList = document.querySelector(window.easygame.constants.LIST_CONTAINER_SELECTOR);
+            if (!gameList) {
+                console.warn('getMoreGameList: リストが見つかりません');
+                return;
+            }
+
+            // 既にリクエスト中の場合は何もしない
+            if (window.easygame.status.isListLoading) {
+                return;
+            }
+            window.easygame.status.isListLoading = true;
+
+            // ローディング表示
+            const gameListLoading = document.querySelector('#gameListLoading');
+            if (gameListLoading) {
+                gameListLoading.style.display = 'block';
+            }
+
+            // 現在のURLからgenreとorderを取得
+            const currentPath = window.location.pathname;
+            let genre = '';
+            let order = 'new';
+
+            // URLパターンをマッチング
+            if (currentPath.includes('/easygame/list')) {
+                // listの場合はendpointを 'list/' に設定
+                genre = 'list';
+            } else if (currentPath.includes('/easygame/genre/')) {
+                // genreの場合はendpointを 'genre/' に設定
+                genre = 'genre';
+                // 現在のパスからジャンルを抽出
+                const genreMatch = currentPath.match(/\/easygame\/genre\/([^\/]+)/);
+                if (genreMatch) {
+                    genre += '/' + genreMatch[1];
+                }
+            }
+
+            // orderをチェック
+            if (currentPath.includes('/popular')) {
+                order = 'popular';
+            }
+
+            // AJAXリクエストを送信
+            $.ajax({
+                'url': `/plusapi/${genre}/${order}.json`,
+                'type': 'GET',
+                'data': {
+                    'page': window.easygame.status.page + 1, // 次のページを取得
+                    'limit': 24,
+                }
+            })
+            .done(response => {
+                if (!response || !response.list) {
+                    console.error('getMoreGameList: リストの取得に失敗:', response);
+                    return;
+                }
+                if (response.list.length < 24) {
+                    window.easygame.status.isListLoadDone = true;
+                    const moreListBtn = document.querySelector('.js-more-list-btn');
+                    if (moreListBtn) {
+                        moreListBtn.style.display = 'none';
+                    }
+                    return;
+                }
+                // ページ番号を更新
+                window.easygame.status.page += 1;
+                
+                // 新しいゲームを追加
+                response.list.forEach(game => {
+                    // 新しいカード要素を作成
+                    const card = easygame.createGameCard(game);
+                    
+                    // お気に入りリストに追加
+                    gameList.appendChild(card);
+                });
+            })
+            .fail(error => {
+                window.showErrorModal('サーバーとの通信に失敗しました。');
+            })
+            .always(() => {
+                // ローディング非表示
+                if (gameListLoading) {
+                    gameListLoading.style.display = 'none';
+                }
+                // ディレイ後isListLoadingフラグをリセット
+                setTimeout(() => {
+                    window.easygame.status.isListLoading = false;
+                }, window.easygame.constants.SCROLL_LOAD_DELAY);
+            });
+        },
+        /**
+         * ハッシュタグ別ゲームリストを取得して追加表示する
+         * @return {void}
+         * @description
+         * 現在のURL(/easygame/hashtag/{タグ}/{order})からタグ名とorderを取得し、
+         * AJAXで次ページを取得して末尾に追記する。list/genre と同じ追記型の挙動。
+         */
+        easygame.getMoreHashtagList = function() {
+            // リスト要素を取得
+            const gameList = document.querySelector(window.easygame.constants.LIST_CONTAINER_SELECTOR);
+            if (!gameList) {
+                console.warn('getMoreHashtagList: リストが見つかりません');
+                return;
+            }
+
+            // すでにリクエスト中またはロード完了の場合は何もしない
+            if (window.easygame.status.isListLoading || window.easygame.status.isListLoadDone) {
+                return;
+            }
+            window.easygame.status.isListLoading = true;
+
+            // ローディング表示
+            const gameListLoading = document.querySelector('#gameListLoading');
+            if (gameListLoading) {
+                gameListLoading.style.display = 'block';
+            }
+
+            // 現在のURLからタグ名とorderを抽出 (/easygame/hashtag/{tag}/{order})
+            const segments = window.location.pathname.split('/').filter(Boolean);
+            const hashtagIndex = segments.indexOf('hashtag');
+            const tag = (hashtagIndex >= 0 && segments[hashtagIndex + 1]) ? segments[hashtagIndex + 1] : '';
+            const order = window.location.pathname.includes('/popular') ? 'popular' : 'new';
+
+            // AJAXリクエストを送信
+            $.ajax({
+                'url': `/plusapi/hashtag/${tag}/${order}.json`,
+                'type': 'GET',
+                'data': {
+                    'page': window.easygame.status.page + 1, // 次のページを取得
+                    'limit': 24,
+                }
+            })
+            .done(response => {
+                if (!response || !response.list) {
+                    console.error('getMoreHashtagList: リストの取得に失敗:', response);
+                    return;
+                }
+                // 新しいゲームを末尾に追記
+                response.list.forEach(game => {
+                    const card = easygame.createGameCard(game);
+                    gameList.appendChild(card);
+                });
+                // ページ番号を更新
+                window.easygame.status.page += 1;
+                // 取得件数がlimit未満なら最終ページとしてボタンを非表示
+                if (response.list.length < 24) {
+                    window.easygame.status.isListLoadDone = true;
+                    const moreListBtn = document.querySelector('.js-more-list-btn');
+                    if (moreListBtn) {
+                        moreListBtn.style.display = 'none';
+                    }
+                }
+            })
+            .fail(error => {
+                window.showErrorModal('サーバーとの通信に失敗しました。');
+            })
+            .always(() => {
+                // ローディング非表示
+                if (gameListLoading) {
+                    gameListLoading.style.display = 'none';
+                }
+                // ディレイ後isListLoadingフラグをリセット
+                setTimeout(() => {
+                    window.easygame.status.isListLoading = false;
+                }, window.easygame.constants.SCROLL_LOAD_DELAY);
+            });
+        },
+
+        /**
+         * ゲームのカードを生成する関数
+         * @param {Object} game - ゲームのデータオブジェクト
+         * @return {HTMLElement} - 生成されたカード要素
+         */
+        easygame.createGameCard = function(game) {
+            // 新しいカード要素を作成
+            const card = document.createElement('li');
+            card.className = 'l-n-card__item c-n-card-game';
+            card.setAttribute('itemscope', '');
+            card.setAttribute('itemtype', 'https://schema.org/Game');
+
+            
+            const isPc = true;
+            
+            // NEWタグの判定（15日以内）
+            const isNew = game.start_time && (Date.now() - new Date(game.start_time).getTime()) < (15 * 24 * 60 * 60 * 1000);
+            
+            // 脳トレカテゴリタグ
+            const noutoreTag = game.noutore_category > 0 
+                ? `<span class="c-n-noutore-tag c-n-noutore-tag--${game.noutore_category}">${game.noutore_category_name || ''}</span>`
+                : '';
+            
+            // ポイント表示
+            const pointDisplay = game.share_point && game.share_point !== '付与対象外'
+                ? `<span class="c-n-card-game__ticket-label">最大</span><span class="c-n-card-game__ticket-value">${game.share_point}</span><span class="c-n-card-game__ticket-label">枚</span>`
+                : `<span class="c-n-card-game__ticket-value">付与対象外</span>`;
+            
+            // カードの内容を生成
+            card.innerHTML = `
+                <a href="/${game.controller || 'easygame'}/${isPc ? 'game' : 'ranking'}/${game.game_id}" data-google-interstitial="false" itemprop="url" onclick="gtag('event', 'クリック',  {'event_category': 'お気に入り_お気に入りゲーム', 'event_label': '${game.title}'});">
+                    <figure class="c-n-card-game__l-thumb">
+                        <img src="//img.kantangame.com/game${game.img_file}?v=2026060401004510369045" alt="${game.genre_name || ''}ゲーム｜${game.title}" width="100" height="100">
+                        ${isNew ? '<div class="c-n-card-game__l-tag c-n-card-game__l-tag--top"><span class="c-n-tag c-n-tag--new">NEW</span></div>' : ''}
+                    </figure>
+                    <div class="c-n-card-game__l-content">
+                        ${noutoreTag}
+                        <h3 class="c-n-card-game__ttl">${game.title}</h3>
+                            <div class="c-n-card-game__l-info">
+                                
+                                                                    <div class="c-n-card-game__ticket">
+                                        <img class="c-n-card-game__ticket-img" src="//img.kantangame.com/common/img/media/89/game_point-20.png" alt="${game.point_unit || ''}">
+                                        ${pointDisplay}
+                                    </div>
+                                    <div class="c-n-card-game__likes">
+                                        <span class="c-n-card-game__likes-icon" role="img" aria-label="お気に入り数"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.404 6.14501C12.174 6.34501 11.821 6.34501 11.592 6.14501C9.80997 4.59501 7.16197 4.53701 5.34297 6.47401C1.35897 11.519 7.14297 15.971 10.958 18.669C11.262 18.8843 11.6254 18.9999 11.998 18.9999C12.3705 18.9999 12.7339 18.8843 13.038 18.669C16.881 15.958 22.638 11.519 18.653 6.47401C16.835 4.53701 14.185 4.59501 12.403 6.14501" fill="black"/>
+</svg>
+</span>
+                                        <span class="c-n-card-game__likes-count">${game.bookmark_count || 0}</span>
+                                    </div>
+                                                            </div>
+                        <div class="c-n-card-game__l-category">
+                            <span class="c-n-card-game__category">#${game.genre_name || ''}</span>
+                        </div>
+                    </div>
+                </a>
+            `;
+
+            return card;
+        }
+
+        /**
+         * お気に入り登録・解除のトグル関数
+         * @return {void}
+         */
+        easygame.isSendingBookmark = false;
+        easygame.toggleBookmark = function() {
+            if (easygame.isSendingBookmark) {
+                return;
+            }
+            easygame.isSendingBookmark = true;
+
+            $.ajax({
+                'url': '/plusapi/bookmark.json',
+                'type': 'POST',
+                'data': {
+                    'game_id': easygame.User.gameId,
+                }
+            })
+            .done(response => {
+                if (response.status === 'success') {
+                    const bookmarkCount = $('.c-n-ranking__like');
+                    if (response.bookmark === 1) {
+                        $('.c-n-bookmark-btn').each((index, btn) => {
+                            const $btn = $(btn);
+                            $btn.addClass('c-n-bookmark-btn--active');
+                            const $text = $btn.find('.c-n-bookmark-btn__txt');
+                            if ($text.length) {
+                                $text.text('お気に入り解除');
+                            }
+                        });
+                        // お気に入り数を更新
+                        bookmarkCount.each((index, count) => {
+                            $(count).text(parseInt($(count).text()) + 1);
+                        });
+                    } else {
+                        $('.c-n-bookmark-btn').each((index, btn) => {
+                            const $btn = $(btn);
+                            $btn.removeClass('c-n-bookmark-btn--active');
+                            const $text = $btn.find('.c-n-bookmark-btn__txt');
+                            if ($text.length) {
+                                $text.text('お気に入り登録');
+                            }
+                        });
+                        // お気に入り数を更新
+                        bookmarkCount.each((index, count) => {
+                            $(count).text(parseInt($(count).text()) - 1);
+                        });
+                    }
+                } else {
+                    window.showErrorModal(response.message);
+                }
+            })
+            .fail(error => {
+                window.showErrorModal('サーバーとの通信に失敗しました。');
+            })
+            .always(() => {
+                easygame.isSendingBookmark = false;
+            });
+        }
+    </script>
+
+
+
+            <script>
+            
+            function toggleFullscreen() {
+                if (!document.fullscreenElement) {
+                    
+                    document.documentElement.requestFullscreen().catch(err => {
+                        console.log('全画面表示に失敗しました:', err);
+                    });
+                } else {
+                    
+                    document.exitFullscreen().catch(err => {
+                        console.log('全画面表示の終了に失敗しました:', err);
+                    });
+                }
+            }
+
+            
+            document.addEventListener('fullscreenchange', function() {
+                const button = document.querySelector('.js-fullscreen-btn');
+                const icon = button ? button.querySelector('img') : null;
+
+                if (document.fullscreenElement) {
+                    
+                    if (icon) {
+                    icon.alt = '全画面表示を終了';
+                    }
+                } else {
+                    
+                    if (icon) {
+                    icon.alt = '全画面表示に切り替え';
+                    }
+                }
+            });
+        </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+                
+                
+                            
+                            
+                
+                $('.c-n-game-ranking__tab').on('click', function() {
+                    const target = $(this).attr('data-tab');
+                    const $tabs = $('.c-n-game-ranking__tab');
+                    const $myRankings = $('.c-n-game-ranking__info');
+                    const $rankings = $('.c-n-game-ranking__l-list');
+                    
+                    $tabs.removeClass('is-active');
+                    $myRankings.hide();
+                    $rankings.hide();
+                    
+                    $(this).addClass('is-active');
+                    $(`.c-n-game-ranking__info[data-tab="${target}"]`).css('display', 'flex');
+                    $(`.c-n-game-ranking__l-list[data-tab="${target}"]`).css('display', 'flex');
+                });
+                        
+            
+            
+                        });
+</script>
+
+
+
+
+
+
+
+    
+    
+
+<script>
+    const adgame_media_user_id_use_ad_tag = 'non_insentive_user';
+    const adgame_media_origin_user_id_use_ad_tag = 'non_insentive_user';
+    const adgame_media_media_id_use_ad_tag = '89';
+    const adgame_media_game_id_use_ad_tag = '795';
+    const adgame_media_sap_id_use_ad_tag = '2';
+</script>
+
+
+    <script async>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5MTD7V');
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W7BLGL7');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9SSVHR74M9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9SSVHR74M9');
+</script>
+
+<!-- fix serviceWorker start -->
+<script>
+(function() {
+    if ('serviceWorker' in navigator) {
+        // 全てのService Workerを登録解除
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            registrations.forEach(function(registration) {
+                registration.unregister();
+            });
+        });
+        
+        // 全てのキャッシュを削除
+        if ('caches' in window) {
+            caches.keys().then(function(cacheNames) {
+                cacheNames.forEach(function(cacheName) {
+                    caches.delete(cacheName);
+                });
+            });
+        }
+    }
+})();
+</script>
+<!-- fix serviceWorker finish -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const banners = document.querySelectorAll('.track-banner');
+        if (banners.length === 0) return;
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'view_promotion', {
+                            'promotion_name': el.getAttribute('data-max_bn_cat'),
+                            'creative_slot': el.getAttribute('data-max_bn_pos'),
+                            'creative_name': el.getAttribute('data-max_bn_cr')
+                        });
+                    }
+                    observer.unobserve(el);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        banners.forEach(banner => {
+            observer.observe(banner);
+        });
+
+        banners.forEach(banner => {
+            banner.addEventListener('click', function() {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'select_promotion', {
+                        'promotion_name': this.getAttribute('data-max_bn_cat'),
+                        'creative_slot': this.getAttribute('data-max_bn_pos'),
+                        'creative_name': this.getAttribute('data-max_bn_cr')
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script async='async' src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+
+<script type="text/javascript">
+    window.googletag = window.googletag || {};
+    window.googletag.cmd = window.googletag.cmd || [];
+</script>
+
+<script>
+    if (typeof window.adgame === 'undefined') {
+        window.adgame = {};
+    }
+
+    const AD_CONFIG = {
+        
+        firstRetryCount: 3,
+        
+        
+                    retryCount: 2,
+                oneTimeReloadTimeoutMs: 3000,
+        sspInterstitialFrequencyMs: 30000,
+        
+        interstitialFrequencyMs: 0,
+    };
+
+    
+    function createSlotBase(label, extra = {}) {
+        return {
+            label: label,
+            tag: null,
+            slot: null,
+            isReady: false,
+            rewardGranted: false,
+            showEvent: null,
+            callback: null,
+            failCallback: null,
+            initCallback: null,
+            retryCount: AD_CONFIG.firstRetryCount,
+            oneTimeReloadTimeoutId: null,
+            ...extra,
+        };
+    }
+
+    
+    function initSlot(slotObj, label, format) {
+        if (slotObj.tag == null) return;
+        slotObj.slot = googletag.defineOutOfPageSlot(slotObj.tag, format);
+        if (slotObj.slot) {
+            slotObj.slot.addService(googletag.pubads());
+            window.toolboxLog('GAM', label + ' スロット定義');
+        }
+        slotObj.oneTimeReloadTimeoutId = setTimeout(() => {
+            if (!slotObj.isReady) {
+                slotObj.reload();
+            }
+            slotObj.oneTimeReloadTimeoutId = null;
+        }, AD_CONFIG.oneTimeReloadTimeoutMs);
+    }
+
+    
+    function showRewardSlot(slotObj, callback, failCallback, showFallback) {
+        slotObj.callback = callback;
+        slotObj.failCallback = failCallback;
+
+        if (slotObj.isReady && typeof slotObj.showEvent === 'function') {
+            try {
+                window.toolboxLog('GAM', slotObj.label + ': 表示');
+                slotObj.showEvent();
+            } catch(e) {
+                window.toolboxLog('GAM', slotObj.label + ': showEvent() エラー - ' + e.message);
+                slotObj.isReady = false;
+                showFallback();
+            }
+        } else {
+            showFallback();
+        }
+    }
+
+    
+    function showFallbackAd(slotObj, gmoyadsChannel) {
+        if (typeof gmoyads !== 'undefined' && gmoyads.initDone && gmoyads.config[gmoyadsChannel] && gmoyads.config[gmoyadsChannel].tag !== null) {
+            
+            gmoyads.show(gmoyadsChannel, () => {
+                slotObj.callback();
+            }, () => {
+                mgr.instead.show(slotObj.callback, slotObj.failCallback);
+            }, () => {
+                
+                slotObj.retryCount = AD_CONFIG.retryCount;
+                slotObj.reload();
+            });
+        } else if (typeof pfxadx.play === 'function' && pfxadx.isReady) {
+            
+            pfxadx.currentSlot = slotObj;
+            pfxadx.play();
+        } else {
+            
+            mgr.instead.show(slotObj.callback, slotObj.failCallback, () => {
+                
+                slotObj.retryCount = AD_CONFIG.retryCount;
+                slotObj.reload();
+            });
+        }
+    }
+
+    
+    function reloadSlot(slotObj) {
+        if (!slotObj.slot) return;
+        if (slotObj.retryCount > 0) {
+            slotObj.retryCount--;
+        } else {
+            return;
+        }
+        googletag.destroySlots([slotObj.slot]);
+        slotObj.init();
+        googletag.display(slotObj.slot);
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh([slotObj.slot]);
+        });
+    }
+
+    window.adgame.adManager = {};
+    const mgr = window.adgame.adManager;
+
+    Object.assign(mgr, {
+        isApp: false,
+        isAdSenseReady: false,
+        
+        init: () => {
+            
+            mgr.interstitial.init();
+            
+            mgr.outGame.init();
+            mgr.outGameSub.init();
+            mgr.inGame.init();
+        },
+        
+        setupEventListeners: () => {
+            const rewardSlots = [
+                { obj: mgr.outGame, label: 'outGame' },
+                { obj: mgr.outGameSub, label: 'outGameSub' },
+                { obj: mgr.inGame, label: 'inGame' },
+            ];
+
+            
+            googletag.pubads().addEventListener('gameManualInterstitialSlotReady', (event) => {
+                if (event.slot === mgr.interstitial.slot) {
+                    if (event.isEmpty) {
+                        window.toolboxLog('GAM', 'インタースティシャル: 広告なし');
+                        mgr.interstitial.isReady = false;
+                        mgr.interstitial.reload();
+                    } else {
+                        window.toolboxLog('GAM', 'インタースティシャル: 準備完了');
+                        mgr.interstitial.showEvent = event.makeGameManualInterstitialVisible;
+                        mgr.interstitial.isReady = true;
+                    }
+                }
+            });
+
+            googletag.pubads().addEventListener("gameManualInterstitialSlotClosed", (event) => {
+                if (event.slot === mgr.interstitial.slot) {
+                    mgr.interstitial.isReady = false;
+                    mgr.interstitial.reload();
+                }
+            });
+
+            
+            googletag.pubads().addEventListener("slotRenderEnded", (event) => {
+                for (const { obj, label } of rewardSlots) {
+                    if (event.slot === obj.slot && event.isEmpty) {
+                        window.toolboxLog('GAM', label + ': 広告なし');
+                        obj.isReady = false;
+                        obj.reload();
+                        return;
+                    }
+                }
+            });
+
+            googletag.pubads().addEventListener("rewardedSlotReady", (event) => {
+                for (const { obj, label } of rewardSlots) {
+                    if (event.slot === obj.slot) {
+                        window.toolboxLog('GAM', label + ': 準備完了');
+                        obj.isReady = true;
+                        obj.showEvent = event.makeRewardedVisible;
+                        if (typeof obj.initCallback === 'function') {
+                            obj.initCallback();
+                            obj.initCallback = null;
+                        }
+                        return;
+                    }
+                }
+            });
+
+            googletag.pubads().addEventListener('rewardedSlotGranted', (event) => {
+                for (const { obj } of rewardSlots) {
+                    if (event.slot === obj.slot) {
+                        obj.rewardGranted = true;
+                        return;
+                    }
+                }
+            });
+
+            googletag.pubads().addEventListener('rewardedSlotClosed', (event) => {
+                for (const { obj } of rewardSlots) {
+                    if (event.slot === obj.slot) {
+                        if (obj.rewardGranted) {
+                            if (typeof obj.callback === 'function') {
+                                obj.callback();
+                            }
+                        } else {
+                            if (typeof obj.failCallback === 'function') {
+                                obj.failCallback();
+                            }
+                        }
+                        obj.rewardGranted = false;
+                        obj.isReady = false;
+                        obj.reload();
+                        return;
+                    }
+                }
+            });
+        },
+        
+        interstitial: {
+            ...createSlotBase('interstitial', {
+                sspFrequencyMs: AD_CONFIG.sspInterstitialFrequencyMs,
+                lastSspShowTime: 0,
+                frequencyMs: AD_CONFIG.interstitialFrequencyMs,
+                lastShowTime: 0,
+            }),
+            init: () => {
+                
+                initSlot(mgr.interstitial, 'インタースティシャル', googletag.enums.OutOfPageFormat.GAME_MANUAL_INTERSTITIAL);
+
+                
+                if (typeof gmoyadsInterstitial !== 'undefined') {
+                    window.yadsInterstitialOverlay = window.yadsInterstitialOverlay || (function() {
+                        window.YJ_YADS = window.YJ_YADS || { tasks: [] };
+                        const TIME_SHOW_AD_COOL_DOWN = 30000;
+
+                        let canShowAd = true;
+                        const frameDiv = document.getElementById('yads-frame');
+                        const gmoyadsDiv = document.createElement('div');
+                        gmoyadsDiv.id = `yads${gmoyadsInterstitial}`;
+                        frameDiv.appendChild(gmoyadsDiv);
+
+                        window.YJ_YADS.tasks.push({
+                            yads_ad_ds: gmoyadsInterstitial,
+                            yads_dispatch_type: 'prefetch'
+                        });
+
+                        return {
+                            show: function() {
+                                if (!canShowAd) {
+                                    console.log('広告のクールタイム中です。');
+                                    return;
+                                }
+                                canShowAd = false;
+                                setTimeout(() => {
+                                    canShowAd = true;
+                                    console.log('広告のクールタイムが終了しました。');
+                                }, TIME_SHOW_AD_COOL_DOWN);
+
+                                window.YJ_YADS.tasks.push({
+                                    yads_ad_ds: gmoyadsInterstitial,
+                                    yads_parent_element: `yads${gmoyadsInterstitial}`,
+                                    yads_dispatch_type: 'render',
+                                });
+                            }
+                        };
+                    })();
+                }
+            },
+            show: () => {
+                
+                                    
+                    if (mgr.interstitial.frequencyMs > 0) {
+                        const now = Date.now();
+                        if (now - mgr.interstitial.lastShowTime < mgr.interstitial.frequencyMs) {
+                            window.toolboxLog('interstitial', 'frequency cap - skipped');
+                            return;
+                        }
+                    }
+
+                    
+                    if (mgr.interstitial.isReady && typeof mgr.interstitial.showEvent === 'function') {
+                        mgr.interstitial.showEvent();
+                        mgr.interstitial.lastShowTime = Date.now();
+                        window.toolboxLog('GAM', 'インタースティシャル: 表示');
+                    } else {
+                        
+                        const showInterstitialFallback = () => {
+                            if (typeof gmoyadsInterstitial !== 'undefined' && typeof window.yadsInterstitialOverlay !== 'undefined') {
+                                
+                                window.yadsInterstitialOverlay.show();
+                                mgr.interstitial.lastShowTime = Date.now();
+                            } else if (typeof mgr.sspInterstitial !== 'undefined' && typeof mgr.sspInterstitial.showAd === 'function') {
+                                
+                                
+                                const sspNow = Date.now();
+                                const useGlobalFrequency = mgr.interstitial.frequencyMs > 0;
+                                if (useGlobalFrequency || sspNow - mgr.interstitial.lastSspShowTime >= mgr.interstitial.sspFrequencyMs) {
+                                    window.toolboxLog('ssp', 'show');
+                                    mgr.sspInterstitial.showAd();
+                                    mgr.interstitial.lastSspShowTime = sspNow;
+                                    mgr.interstitial.lastShowTime = sspNow;
+
+                                    if (typeof mgr.sspInterstitial.loadAd === 'function') {
+                                        mgr.sspInterstitial.loadAd();
+                                    }
+                                } else {
+                                    window.toolboxLog('ssp', 'frequency cap - skipped');
+                                }
+                            }
+                        };
+
+                        
+                        if (mgr.isAdSenseReady && typeof adBreak !== 'undefined' && typeof adBreak === 'function') {
+                            let isGoogleAdShown = false;
+                            adBreak({
+                                type: 'next',
+                                name: 'restart-game',
+                                beforeAd: function() {
+                                    isGoogleAdShown = true;
+                                    mgr.interstitial.lastShowTime = Date.now();
+                                    console.log('beforeAd');
+                                },
+                                afterAd: function() { console.log('afterAd'); },
+                                adBreakDone: (placementInfo) => {
+                                    console.log('breakStatus: ' + placementInfo.breakStatus);
+                                    if (!isGoogleAdShown) {
+                                        showInterstitialFallback();
+                                    }
+                                }
+                            });
+                        } else {
+                            showInterstitialFallback();
+                        }
+
+                        if (mgr.interstitial.tag != null) {
+                            
+                            mgr.interstitial.retryCount = AD_CONFIG.retryCount;
+                            mgr.interstitial.reload();
+                        }
+                    }
+                            },
+            reload: () => { reloadSlot(mgr.interstitial); },
+        },
+        
+        outGame: {
+            ...createSlotBase('outGame'),
+            init: () => { initSlot(mgr.outGame, 'outGame', googletag.enums.OutOfPageFormat.REWARDED); },
+            reload: () => { reloadSlot(mgr.outGame); },
+            show: (callback = () => {}, failCallback = () => {}) => {
+                
+                                    showRewardSlot(mgr.outGame, callback, failCallback, () => {
+                        showFallbackAd(mgr.outGame, 'outGame');
+                    });
+                            },
+        },
+        
+        outGameSub: {
+            ...createSlotBase('outGameSub'),
+            init: () => { initSlot(mgr.outGameSub, 'outGameSub', googletag.enums.OutOfPageFormat.REWARDED); },
+            reload: () => { reloadSlot(mgr.outGameSub); },
+            show: (callback = () => {}, failCallback = () => {}) => {
+                
+                                    showRewardSlot(mgr.outGameSub, callback, failCallback, () => {
+                        showFallbackAd(mgr.outGameSub, 'outGame');
+                    });
+                            },
+        },
+        
+        inGame: {
+            ...createSlotBase('inGame'),
+            init: () => { initSlot(mgr.inGame, 'inGame', googletag.enums.OutOfPageFormat.REWARDED); },
+            reload: () => { reloadSlot(mgr.inGame); },
+            show: (callback = () => {}, failCallback = () => {}) => {
+                
+                                    showRewardSlot(mgr.inGame, callback, failCallback, () => {
+                        if (typeof adBreak !== 'undefined' && typeof adBreak === 'function' && mgr.isAdSenseReady) {
+                            
+                            adBreak({
+                                type: 'reward',
+                                name: 'in_game',
+                                beforeAd: function() { console.log('reward_beforeAd'); },
+                                afterAd: function() { console.log('reward_afterAd'); },
+                                beforeReward: (showAdFn) => {
+                                    console.log("beforeReward");
+                                    showAdFn();
+                                },
+                                adDismissed: function() { console.log('reward_adDismissed'); },
+                                adViewed: function() { console.log('reward_adViewed'); },
+                                adBreakDone: (placementInfo) => {
+                                    console.log('breakStatus: ' + placementInfo.breakStatus);
+                                    if (placementInfo.breakStatus === 'viewed') {
+                                        callback();
+                                    } else {
+                                        showFallbackAd(mgr.inGame, 'inGame');
+                                    }
+
+                                    
+                                    mgr.inGame.retryCount = AD_CONFIG.retryCount;
+                                    mgr.inGame.reload();
+                                },
+                            });
+                        } else {
+                            showFallbackAd(mgr.inGame, 'inGame');
+                        }
+                    });
+                            },
+        },
+        
+        instead: {
+            show: (callback = () => {}, failCallback = () => {}, always = null) => {
+                
+                                    window.toolboxLog('ads', 'showInsteadAd');
+
+                    $('#ad-content, #skipTxt').show();
+                    $('.ad-modal-box, #adSkipBtn').hide();
+
+                    const milli = 1000;
+                    let skipSec = 5;
+                    const closeSec = 30;
+
+                    $('.ad-modal-box').fadeIn(1500);
+                    $('#skip-sec').text(skipSec);
+                    $('#close-sec').text(closeSec);
+
+                    setTimeout(function() {
+                        $('#skipTxt').hide();
+                        $('#adSkipBtn').show();
+                    }, skipSec * milli);
+
+                    const secTimer = setInterval(function() {
+                        skipSec--;
+                        if (skipSec <= 0) clearInterval(secTimer);
+                        $('#skip-sec').text(skipSec);
+                    }, milli);
+
+                    const adSkip = function() {
+                        $('#ad-content').hide();
+                        clearTimeout(autoAdClose);
+                        clearInterval(secTimer);
+                        callback();
+                        if (typeof always === 'function') always();
+                    };
+
+                    const autoAdClose = setTimeout(function() {
+                        adSkip();
+                    }, closeSec * milli);
+
+                    $('#adSkipBtn').off('click').on('click', adSkip);
+                            },
+        },
+        
+        sspInterstitial: {
+            closed: () => {
+                window.toolboxLog('ssp', 'closed');
+
+                // ads_v4.jsのフラグを設定
+                if (typeof isSSPInterstitialClosed !== 'undefined' && typeof enablePlayButton === 'function') {
+                    isSSPInterstitialClosed = true;
+                    enablePlayButton();
+                }
+            },
+        },
+    });
+
+    
+    
+    window.gmoInterstitialAdClosedHandler = () => {
+        mgr.sspInterstitial.closed();
+    };
+
+    
+    window.addEventListener('message', function(event) {
+        if (event.data && event.data.type === 'gmoInterstitialAdClosed') {
+            mgr.sspInterstitial.closed();
+        }
+    }, false);
+
+    
+    window.pfxadx = window.pfxadx || {};
+    pfxadx.isReady = false;
+    pfxadx.currentSlot = null;
+    pfxadx.log = function(message) {
+        console.log(`%cPFX adx%c ${message}`, "color: #FFF; background: blue; padding: 5px; border-radius:12px; margin-top: 5px; margin-bottom: 5px;", "");
+    };
+    pfxadx.haveAdFn = function() {
+        pfxadx.log('在庫あり');
+        pfxadx.isReady = true;
+    };
+    pfxadx.noAdFn = function() {
+        pfxadx.log('在庫なし');
+        pfxadx.isReady = false;
+    };
+    pfxadx.rewardedFn = function() {
+        pfxadx.log('リワード視聴完了');
+        pfxadx.isReady = false;
+        if (pfxadx.currentSlot && typeof pfxadx.currentSlot.callback === 'function') {
+            pfxadx.currentSlot.callback();
+        }
+        pfxadx.load();
+        pfxadx.alwaysFn();
+    };
+    pfxadx.errorFn = function() {
+        pfxadx.log('エラーまたはユーザーが広告を中止');
+        pfxadx.isReady = false;
+        if (pfxadx.currentSlot && typeof pfxadx.currentSlot.failCallback === 'function') {
+            pfxadx.currentSlot.failCallback();
+        }
+        pfxadx.load();
+        pfxadx.alwaysFn();
+    };
+    pfxadx.alwaysFn = function() {
+        
+        if (pfxadx.currentSlot) {
+            pfxadx.currentSlot.retryCount = AD_CONFIG.retryCount;
+            pfxadx.currentSlot.reload();
+            pfxadx.currentSlot = null;
+        }
+    };
+</script>
+
+
+
+
+
+
+
+    
+        
+            
+        
+
+
+
+    
+
+                                    
+                        
+                    
+                                                                                
+                                                                                                                                            
+        
+    
+            
+        <script async
+            data-ad-client="ca-pub-6239089919301312"
+            data-ad-channel="7520601711"
+            data-ad-frequency-hint="30s"            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+            crossorigin="anonymous">
+        </script>
+        <script>
+            
+            window.adsbygoogle = window.adsbygoogle || [];
+            window.adBreak = window.adBreak || function (o) { window.adsbygoogle.push(o); }
+            window.adConfig = window.adConfig || function (o) { window.adsbygoogle.push(o); }
+
+            
+            adConfig({
+                
+                preloadAdBreaks: 'on',
+                
+                sound: 'off',
+                
+                onReady: function() {
+                    window.toolboxLog('Adsense', 'Ready');
+                    
+                    window.adgame.adManager.isAdSenseReady = true;
+                }
+            });
+        </script>
+    
+
+        
+        
+
+
+
+    
+
+        
+            
+                                        
+                        
+                    
+                                                                                
+                                    <script>var ADSENSE_AD_TAG ='https://pubads.g.doubleclick.net/gampad/ads?iu=/22882323146/gb_89_docomo/gb_pc_89_docomo_video_ingame&description_url=https%3A%2F%2Fgame.hiroba.dpoint.jp%2Feasygame&tfcd=0&npa=0&sz=640x480|730x400|320x480|640x360|300x250&ad_type=video&vad_type=linear&min_ad_duration=1000&max_ad_duration=16000&gdfp_req=1&output=vast&env=vp&unviewed_position_start=1&impl=s&plcmt=1&vpa=click&vpmute=0&vpos=preroll'</script>
+                                        
+        <script type="text/javascript" src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+        <script type="text/javascript" src="/js/ads_v4.js?v=2026070617380421723667"></script>
+
+        
+        <script src="/js/gmoyads.js"></script>
+        
+        
+
+    
+
+    
+
+            
+        
+        
+
+    
+
+    
+
+            
+        
+        
+
+
+
+    
+
+            
+        
+        
+
+
+
+    
+
+            
+
+        
+        
+        
+        
+
+    
+
+    
+
+                                    
+                            
+                                                                                                                                                                                                                                                                        
+                                                                                                
+                                
+                            
+                                                            
+                                                            
+        
+        
+
+
+
+    
+
+                                    
+                            
+                                                        
+                    
+                                                                                
+                                    <script async src="https://yads.c.yimg.jp/js/yads-async.js"></script>
+<script>const gmoyadsInterstitial = '35171_934006';</script>
+                                        
+        
+    
+    
+
+    
+
+    
+
+        
+            
+                                        
+                        
+                                
+                            
+                                                            <script>
+       window.googletag = window.googletag || {cmd: []};
+       var google_interstitial_slot;
+       googletag.cmd.push(function() {
+         google_interstitial_slot  = 
+        googletag.defineOutOfPageSlot("/22882323146/gb_89_docomo/gb_pc_89_docomo_interstitial_allpage", googletag.enums.OutOfPageFormat.INTERSTITIAL);
+         if (google_interstitial_slot) {
+
+             const enableTriggers = true;
+      
+             google_interstitial_slot.setConfig({
+               interstitial: {
+                 triggers: {
+                   navBar: enableTriggers,
+                   unhideWindow: enableTriggers,
+                 },
+               },
+             });
+
+           google_interstitial_slot.addService(googletag.pubads());
+         }
+         googletag.pubads().enableSingleRequest();
+         googletag.enableServices();
+         googletag.display(google_interstitial_slot);
+      });
+
+</script>
+                                                            
+    
+    
+
+        
+    
+    
+    
+    
+                    
+        
+            
+    
+    <script type="text/javascript">
+        window.pbjs = window.pbjs || {};
+        window.pbjs.que = window.pbjs.que || [];
+    </script>
+    
+    <script async='async' src="https://flux-cdn.com/client/00044/adgame-docomo_00632.min.js"></script>
+
+    
+    <script type="text/javascript">
+        window.fluxtag = {
+            readyBids: {
+                prebid: false,
+                google: false
+            },
+            failSafeTimeout: 3e3,
+            isFn: function isFn(object) {
+                var _t = 'Function';
+                var toString = Object.prototype.toString;
+                return toString.call(object) === '[object ' + _t + ']';
+            },
+            launchAdServer: function() {
+                if (!fluxtag.readyBids.prebid) {
+                    return;
+                }
+                fluxtag.requestAdServer();
+            },
+            requestAdServer: function() {
+                if (!fluxtag.readyBids.google) {
+                    fluxtag.readyBids.google = true;
+                    googletag.cmd.push(function () {
+                        var pbjsLoaded = !!(window.pbjs && pbjs.que &&
+                            fluxtag.isFn(pbjs.que.push) &&
+                            (pbjs.libLoaded || (pbjs.setTargetingForGPTAsync &&
+                                fluxtag.isFn(pbjs.setTargetingForGPTAsync))));
+                        if (pbjsLoaded) {
+                            pbjs.que.push(function () {
+                                if (pbjs.setTargetingForGPTAsync && fluxtag.isFn(pbjs.setTargetingForGPTAsync)) {
+                                    try {
+                                        Promise.resolve(pbjs.setTargetingForGPTAsync())
+                                            .catch(function () {})
+                                            .then(function () {
+                                                googletag.pubads().refresh();
+                                            });
+                                    } catch (e) {
+                                        googletag.pubads().refresh();
+                                    }
+                                } else {
+                                    googletag.pubads().refresh();
+                                }
+                            });
+                        } else {
+                            googletag.pubads().refresh();
+                        }
+                    });
+                }
+            }
+        };
+    </script>
+
+    
+    <script type="text/javascript">
+        setTimeout(function() {
+            fluxtag.requestAdServer();
+        }, fluxtag.failSafeTimeout);
+    </script>
+
+
+<script type="text/javascript">
+    googletag.cmd.push(function () {
+        
+                    
+                                                
+
+    
+
+    
+
+                                    
+                        
+                                
+                            
+                                    
+                                            
+                    
+                        
+                    
+                        
+                    
+                                            
+                                                
+                        
+                                                                                                                                                                        googletag.defineSlot('/22882323146/gb_89_docomo/gb_pc_89_docomo_banner_gamesupleft', [300, 250], 'gb_pc_banner_gamesupleft').addService(googletag.pubads());
+
+                                                            
+                                                
+                                                
+
+    
+
+    
+
+                                    
+                        
+                                
+                            
+                                    
+                                            
+                    
+                        
+                    
+                        
+                    
+                                            
+                                                
+                        
+                                                                                                                                                                        googletag.defineSlot('/22882323146/gb_89_docomo/gb_pc_89_docomo_banner_gamesbottom', [[970, 90], [728, 90]], 'gb_pc_banner_gamesbottom').addService(googletag.pubads());
+
+                                                            
+                                                
+                                                
+
+    
+
+    
+
+                                    
+                        
+                                
+                            
+                                    
+                                            
+                    
+                        
+                    
+                        
+                    
+                                            
+                                                
+                        
+                                                                                                                                                                        googletag.defineSlot('/22882323146/gb_89_docomo/gb_pc_89_docomo_banner_gamesrightside', [300, 250], 'gb_pc_banner_gamesrightside').addService(googletag.pubads());
+
+                                                            
+                                                
+                                                                        
+
+
+
+    
+
+                                    
+                        
+                    
+                                                                                
+                                    window.adgame.adManager.interstitial.tag = "/22882323146/gb_89_docomo/gb_pc_89_docomo_interstitial_ingame";
+                                        
+                                                                    
+                                                                        
+
+
+
+    
+
+                                    
+                        
+                    
+                                                                                
+                                    window.adgame.adManager.outGameSub.tag = "/22882323146/gb_89_docomo/gb_pc_89_docomo_reward_heal";
+                                        
+                                                                    
+                                                                        
+
+
+
+    
+
+                                    
+                        
+                    
+                                                                                
+                                    window.adgame.adManager.inGame.tag = "/22882323146/gb_89_docomo/gb_pc_89_docomo_reward_ingame";
+                                        
+                                                                    
+                                                                        
+
+
+
+    
+
+                                    
+                        
+                    
+                                                                                
+                                    window.adgame.adManager.outGame.tag = "/22882323146/gb_89_docomo/gb_pc_89_docomo_reward_add";
+                                        
+                                                        
+        
+        window.adgame.adManager.init();
+        
+        window.adgame.adManager.setupEventListeners();
+        
+        googletag.setConfig({ singleRequest: true, disableInitialLoad: true });
+        googletag.enableServices();
+
+                    pbjs.que.push(function () {
+                window.pbFlux.prebidBidder();
+            });
+            });
+</script>
+
+
+<script>
+    
+    
+
+
+
+    
+
+                                    
+                        
+                    
+                                                                                
+                                    
+                                        
+    window.adgame.adManager._lastHbRefreshTime = 0;
+    
+    window.adgame.adManager._hbRefreshInterval =
+        (typeof window.adgame.adManager.hbRefreshInterval === 'number' && window.adgame.adManager.hbRefreshInterval > 0)
+            ? window.adgame.adManager.hbRefreshInterval
+            : 30000;
+    window.adgame.adManager.refreshHeaderBiddingAds = () => {
+        
+        const now = Date.now();
+        const elapsed = now - window.adgame.adManager._lastHbRefreshTime;
+        if (elapsed < window.adgame.adManager._hbRefreshInterval) {
+            window.toolboxLog('ads', 'hb refresh skipped');
+            return;
+        }
+        window.adgame.adManager._lastHbRefreshTime = now;
+
+        
+        const definedSlots = [
+            
+                            {
+                                            
+
+    
+
+    
+
+                                    
+                        
+                                
+                            
+                                    
+                                            
+                    
+                        
+                    
+                        
+                    
+                                            
+                                                
+                        
+                                                                                                                                                                        slotID: "gb_pc_banner_gamesupleft",slotName: "/22882323146/gb_89_docomo/gb_pc_89_docomo_banner_gamesupleft",sizes: [300, 250]
+                                                            
+                                    },
+                            {
+                                            
+
+    
+
+    
+
+                                    
+                        
+                                
+                            
+                                    
+                                            
+                    
+                        
+                    
+                        
+                    
+                                            
+                                                
+                        
+                                                                                                                                                                        slotID: "gb_pc_banner_gamesbottom",slotName: "/22882323146/gb_89_docomo/gb_pc_89_docomo_banner_gamesbottom",sizes: [[970, 90], [728, 90]]
+                                                            
+                                    },
+                            {
+                                            
+
+    
+
+    
+
+                                    
+                        
+                                
+                            
+                                    
+                                            
+                    
+                        
+                    
+                        
+                    
+                                            
+                                                
+                        
+                                                                                                                                                                        slotID: "gb_pc_banner_gamesrightside",slotName: "/22882323146/gb_89_docomo/gb_pc_89_docomo_banner_gamesrightside",sizes: [300,250]
+                                                            
+                                    },
+                            {
+                                            
+
+    
+
+    
+
+                                    
+                        
+                                
+                            
+                                                                            
+                                    },
+                            {
+                                            
+
+    
+
+    
+
+                                    
+                        
+                                
+                            
+                                                                            
+                                    },
+                            {
+                                            
+
+    
+
+    
+
+                                    
+                        
+                                
+                            
+                                                                            
+                                    },
+                            {
+                                            
+
+    
+
+    
+
+                                    
+                        
+                                
+                            
+                                                                            
+                                    },
+                    ];
+
+        
+        const adUnitCodesToRefresh = definedSlots.filter(slot => {
+            return slot.slotID;
+        }).map(slot => slot.slotID);
+
+        
+        if (adUnitCodesToRefresh.length === 0) {
+            
+            return;
+        }
+
+        window.toolboxLog('ads', 'hb refresh');
+
+        if (window.pbjs && pbjs.que) {
+            pbjs.que.push(function() {
+                pbjs.requestBids({
+                    adUnitCodes: adUnitCodesToRefresh,
+                    bidsBackHandler: function(bids) {
+                        googletag.cmd.push(function() {
+                            // 対象スロットをすべて取得します
+                            const slots = googletag.pubads().getSlots().filter(function(s) {
+                                return adUnitCodesToRefresh.includes(s.getSlotElementId());
+                            });
+
+                            if (slots && slots.length > 0) {
+                                // 取得したスロットをループして、各スロットのキーをクリアします
+                                slots.forEach(function(slot) {
+                                    const existingKeys = slot.getTargetingKeys();
+                                    if (existingKeys && existingKeys.length > 0) {
+                                        const prebidKeys = existingKeys.filter(function(key) {
+                                            return key.startsWith('hb_');
+                                        });
+                                        if (prebidKeys.length > 0) {
+                                            prebidKeys.forEach(function(key) {
+                                                slot.clearTargeting(key);
+                                            });
+                                        }
+                                    }
+                                });
+
+                                // 新しいターゲティング情報をセットします
+                                pbjs.setTargetingForGPTAsync(adUnitCodesToRefresh);
+
+                                // 取得したスロットの配列を渡して、すべてrefreshします
+                                googletag.pubads().refresh(slots);
+
+                                window.toolboxLog('ads', 'hb refresh completed');
+                            } else {
+                                console.warn("対象の広告スロットが見つかりません。");
+                            }
+                        });
+                    }
+                });
+            });
+        } else {
+            console.warn("Prebid.js (pbjs) がロードされていません。");
+        }
+    };
+</script>
+
+
+<div id="ad-loading-overlay" style="display: none;">
+    <div class="ad-loading-content">
+        <div class="spinner"></div>
+        <div class="loading-messages">
+            <p class="initial-message">ロード中...</p>
+            <div class="additional-messages" style="display: none;">
+                <p class="loading-notice">ローディングが完了しない場合以下をお試しください。</p>
+                <p class="connection-message">通信環境の良い場所でページを更新する</p>
+                <p class="adblock-message">広告ブロッカーを一時的に無効にする</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #ad-loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 999998;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        pointer-events: all;
+        touch-action: none;
+        user-select: none;
+    }
+
+    .ad-loading-content {
+        text-align: center;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .loading-messages {
+        margin-top: 1rem;
+    }
+
+    .initial-message {
+        margin: 0;
+    }
+
+    .additional-messages {
+        margin-top: 1rem;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .additional-messages.show {
+        opacity: 1;
+    }
+
+    .loading-notice {
+        margin: 0 0 0.8rem 0;
+        font-size: 1.3rem;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .connection-message {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.2rem;
+        color: #ffcc00;
+        font-weight: bold;
+    }
+
+    .adblock-message {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #ff9999;
+        line-height: 1.4;
+        font-weight: bold;
+    }
+
+    .spinner {
+        margin: 0 auto 1rem auto;
+        width: 40px;
+        height: 40px;
+        border: 4px solid white;
+        border-top: 4px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 600px) {
+        .ad-loading-content {
+            font-size: 1rem;
+        }
+        
+        .loading-notice {
+            font-size: 1.4rem;
+        }
+        
+        .connection-message {
+            font-size: 1.3rem;
+        }
+        
+        .adblock-message {
+            font-size: 1.3rem;
+        }
+    }
+</style>
+
+<script>
+    window.adLoadingOverlay = (function() {
+        const overlay = document.getElementById('ad-loading-overlay');
+        let timeoutId = null;
+        let isShowing = false;
+
+        function preventScroll(e) {
+            e.preventDefault();
+        }
+
+        function resetMessages() {
+            const initialMessage = overlay.querySelector('.initial-message');
+            const additionalMessages = overlay.querySelector('.additional-messages');
+            
+            if (initialMessage) {
+                initialMessage.style.display = 'block';
+            }
+            if (additionalMessages) {
+                additionalMessages.style.display = 'none';
+                additionalMessages.classList.remove('show');
+            }
+        }
+
+        function showAdditionalMessages() {
+            const initialMessage = overlay.querySelector('.initial-message');
+            const additionalMessages = overlay.querySelector('.additional-messages');
+            
+            if (initialMessage) {
+                initialMessage.style.display = 'none';
+            }
+            if (additionalMessages) {
+                additionalMessages.style.display = 'block';
+                // 少し遅らせてフェードイン効果を有効にする
+                setTimeout(() => {
+                    additionalMessages.classList.add('show');
+                }, 50);
+            }
+        }
+
+        return {
+            show: function() {
+                if (!overlay || isShowing) return;
+                
+                isShowing = true;
+                
+                // メッセージを初期状態にリセット
+                resetMessages();
+                
+                // オーバーレイを表示
+                overlay.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                document.body.style.touchAction = 'none';
+                document.addEventListener('touchmove', preventScroll, { passive: false });
+                
+                // 1秒後に追加メッセージを表示
+                timeoutId = setTimeout(() => {
+                    if (isShowing) {
+                        showAdditionalMessages();
+                    }
+                }, 3000);
+            },
+            
+            hide: function() {
+                if (!overlay || !isShowing) return;
+                
+                isShowing = false;
+                
+                // タイマーをクリア
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                    timeoutId = null;
+                }
+                
+                // オーバーレイを非表示
+                overlay.style.display = 'none';
+                document.body.style.overflow = '';
+                document.body.style.touchAction = '';
+                document.removeEventListener('touchmove', preventScroll);
+                
+                // 次回使用のために初期状態にリセット
+                resetMessages();
+            },
+            
+            isVisible: function() {
+                return isShowing;
+            }
+        };
+    })();
+</script>
+
+
+
+<div id="yads-frame"></div>
+
+
+<div id="ad-content" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; overflow: hidden;">
+    <div class="ad-modal-box" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 90%; max-height: 90%; background: white; border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);">
+        
+        
+
+
+
+    
+
+                                    
+                        
+                    
+                                                                                
+                                    <div style="text-align:center; margin-top:5px; margin-bottom:5px;">
+    <a href="https://kantan.game/quiz?utm_source=pmedia&utm_medium=bnr_1&utm_campaign=normal" target="_blank"><img src="https://img.kantangame.com/quiz/common/img/media/114/bnr/bnr_001_300x250.png" style="width:300px" /></a>
+</div>
+                                        
+        <div class="ad-controls" style="padding: 10px; text-align: center; background: #f5f5f5; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+            <div class="skip-controls" style="margin-bottom: 10px;">
+                <div id="skipTxt" style="color: #333; font-size: 14px; margin-bottom: 10px;">この広告は<span id="skip-sec">5</span>秒後にスキップできます</div>
+                <button id="adSkipBtn" type="button" style="display: none; padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">広告をスキップ</button>
+            </div>
+            <div class="auto-close" style="color: #666; font-size: 12px;">この広告は<span id="close-sec">10</span>秒で閉じます</div>
+        </div>
+    </div>
+</div>
+
+
+</head>
+
+<body>
+    
+        
+
+
+    
+    
+
+
+
+    
+
+        
+            
+                                        
+                            
+                                                                                                                                                                                                                                                                        
+                                                            
+                    
+                                                                                
+                                    <link rel="preload" as="script" href="https://pdn.adingo.jp/p.js">
+<link rel="preconnect" href="https://sh.adingo.jp" crossorigin="use-credentials">
+
+<!-- divタグをラップする。クリエイティブ要素を消すときはこの親divを消せば良い -->
+<div id="fluct-interstitial-parent">
+  <!--      fluct ユニット名「fluct-unit-1000295874-1」     -->
+  <div class="fluct-unit-1000295874-1"></div>
+</div>
+
+<!--      fluct グループ名「ポイント広場（GMOメディア株式会社）（インタースティシャル）_300x250_Web_インタースティシャル_GB_PC_[89]docomo_インタースティシャル_全ページ」      -->
+<script type="text/javascript" src="https://pdn.adingo.jp/p.js" async></script>
+<script type="text/javascript">
+  var fluctAdScript = fluctAdScript || {};
+  fluctAdScript.cmd = fluctAdScript.cmd || [];
+  fluctAdScript.cmd.push(function (cmd) {
+    cmd.setGamTargetingMap('%%PATTERN:TARGETINGMAP%%');
+    cmd.requestAdByGroup("1000186356")
+      .display(".fluct-unit-1000295874-1", "1000295874")
+      .onRendered((res) => {
+        const closeButton = res.componentMap.closeButton;
+
+        closeButton.addEventListener('click', () => {
+          // メディアが定義した関数を呼び出す
+          if (typeof window.gmoInterstitialAdClosedHandler === 'function') {
+            window.gmoInterstitialAdClosedHandler();
+          } else {
+            console.warn('gmoInterstitialAdClosedHandler が定義されてないようです。');
+          }
+          // 広告要素のDOMを丸ごとクリア
+          document.getElementById('fluct-interstitial-parent').remove();
+        });
+      });
+  });
+</script>
+
+                                        
+
+    
+    
+
+
+    
+    <div id="errorModal" class="c-n-modal-block">
+    
+    <div class="c-n-overlay"></div>
+
+    
+    <div class="l-n-modal">
+        <div class="c-n-modal">
+            <div class="c-n-modal__inner">
+                <div class="c-n-modal__icon">
+                    <span class="c-n-modal__svg c-n-modal__svg--error">
+                        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20.5" r="18.5" stroke="currentColor" stroke-width="3"/>
+<circle cx="20" cy="29.25" r="3" fill="currentColor" stroke="currentColor" stroke-width="0.5"/>
+<path d="M17.0869 8.75H22.9131C23.3246 8.75 23.6538 9.07979 23.6631 9.48145L23.6602 9.5625L22.4941 23.5625C22.4617 23.9511 22.1361 24.25 21.7461 24.25H18.2539C17.9125 24.25 17.6204 24.0209 17.5312 23.7031L17.5059 23.5625L16.3398 9.5625C16.3034 9.12524 16.6481 8.75 17.0869 8.75Z" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
+</svg>
+
+                    </span>
+                </div>
+                <div class="c-n-modal__content">
+                    <h2 class="c-n-modal__ttl"><span>エラーが発生しました</span></h2>
+
+                    <div class="c-n-error">
+                        <p class="c-n-error__ttl">エラー内容</p>
+                        <p id="errorMessage" class="c-n-error__txt"></p>
+                    </div>
+
+                    
+                    <a href="javascript:location.reload();" id="errorReloadBtn" class="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--outline" onclick="gtag('event', 'click', {'event_category': 'modal', 'event_label': '更新する'});" style="display: none;">
+                        更新する
+                    </a>
+
+                    
+                    <a href="/easygame" id="errorBackBtn" class="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--outline" onclick="gtag('event', 'click', {'event_category': 'modal', 'event_label': 'TOPに戻る'});" style="display: none;">
+                        TOPに戻る
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <section class="l-n-game l-n-game--radius">
+        
+        
+    <header class="l-n-game__head c-n-game-head">
+    <div class="c-n-game-head__left">
+        <a class="c-n-game-link" href="/easygame">
+            <img src="//img.kantangame.com/common/img/game/icon-home.png" alt="">ホームへ戻る
+        </a>
+        <div class="c-n-game-head__l-info">
+            <img src="//img.kantangame.com/game/img/plus/game/795.png?v=2026060401004510369045" alt="パズルゲーム｜マジックスライド" itemprop="image">
+            <p class="c-n-game-head__ttl">マジックスライド</p>
+        </div>
+                    
+            <div class="c-n-game-head__bookmark">
+                                    <span class="c-n-ranking__like c-n-bookmark-btn c-n-bookmark-btn__count">430</span>
+                            </div>
+            </div>
+    <div class="c-n-game-head__right">
+                    
+                            <button class="c-n-game-btn c-n-bookmark-btn" disabled>
+                    <span class="c-n-bookmark-btn__txt">お気に入り登録</span>
+                </button>
+                            <button type="button" class="c-n-game-btn" onclick="showModal('jsModalGameHowto')">
+            <img src="//img.kantangame.com/easygame/common/img/game/icon-controller.png" alt="" class="c-n-game-head__icon">
+            遊び方
+        </button>
+                                    <button class="c-n-game-head__expand js-fullscreen-btn" onclick="toggleFullscreen()">
+            <img src="//img.kantangame.com/common/img/game/icon-over-size.png" alt="全画面表示に切り替え" class="c-n-game-head__icon">
+        </button>
+    </div>
+</header>
+
+
+
+        <div class="l-n-game__main">
+            
+            
+    <aside class="l-n-game__side l-n-game__side--left c-n-game-side">
+    <div>
+        
+        
+
+
+
+    
+
+                                    
+                        
+                    
+                                                                                
+                                    <div id='gb_pc_banner_gamesupleft' style='min-width: 300px; min-height: 250px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('gb_pc_banner_gamesupleft'); });
+  </script>
+</div>
+                                        
+    </div>
+
+            
+        <div class="c-n-game-sec c-n-game-sec--border">
+            <header class="c-n-game-sec__header">
+                <h3 class="c-n-game-sec__ttl">今日の目標</h3>
+                <p class="c-n-game-sec__info">毎日 午前0時更新</p>
+            </header>
+            <div class="c-n-game-sec__body">
+                <ul class="c-n-game-goal-score">
+                                            <li class="c-n-game-goal-score__score">
+                            <div>37,680<small>点</small></div>
+                            <span>
+                                <img src="//img.kantangame.com/easygame/common/img/game/icon-ticket.png" alt="抽選券">
+                                × 20
+                            </span>
+                        </li>
+                                            <li class="c-n-game-goal-score__score">
+                            <div>21,570<small>点</small></div>
+                            <span>
+                                <img src="//img.kantangame.com/easygame/common/img/game/icon-ticket.png" alt="抽選券">
+                                × 5
+                            </span>
+                        </li>
+                                            <li class="c-n-game-goal-score__score">
+                            <div>12,830<small>点</small></div>
+                            <span>
+                                <img src="//img.kantangame.com/easygame/common/img/game/icon-ticket.png" alt="抽選券">
+                                × 3
+                            </span>
+                        </li>
+                                            <li class="c-n-game-goal-score__score">
+                            <div>8,310<small>点</small></div>
+                            <span>
+                                <img src="//img.kantangame.com/easygame/common/img/game/icon-ticket.png" alt="抽選券">
+                                × 1
+                            </span>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+            </aside>
+
+
+
+            <main class="l-n-game__center c-n-game-center c-n-game-center--radius">
+                
+                
+    <div id="adInstream" class="c-n-ad-instream">
+    
+    <div class="c-n-game-start">
+        <div class="c-n-game-start__icon">
+            <img src="//img.kantangame.com/game/img/plus/game/795.png?v=2026060401004510369045" alt="パズルゲーム｜マジックスライド" itemprop="image">
+        </div>
+        <h1 class="c-n-game-start__ttl">マジックスライド</h1>
+
+        
+        <div class="c-n-game-start__l-btn">
+            <button id="playBtn" class="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--reward c-n-game-start__loading" disabled onclick="easygame.playGame()">ゲームスタート</button>
+        </div>
+
+        <div class="js-healing-btn c-n-game-result-score__l-btn" style="display: none;">
+            <button type="button" class="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--reward-ad">広告を見て受け取り回数増加</button>
+        </div>
+
+        <p class="c-n-game-start__info">
+            ゲームをスムーズに楽しむためには広告の表示が必要です。<br />
+            広告ブロッカーをご利用の場合は一時的に無効にしてください。
+        </p>
+    </div>
+    <div id="mainContainer" style="position: absolute; width: 100%; height: 100%; z-index: 10; display: none;">
+        <div id="content" style="width: 100%; height: 100%;"></div>
+    </div>
+</div>
+
+
+
+                
+                
+    <iframe class="c-n-game-center__game" src="//img.kantangame.com/game/plus/sync/game/magicslide_20260604/game.html?0000-00-00%2000%3A00%3A00"></iframe>
+
+
+
+                
+                
+        
+    <div id="gameResult" class="c-n-game-result c-n-game-result--low c-n-game-result--nologin" style="display: none;">
+        <div class="c-n-game-result__sec">
+            <div class="c-n-game-result-score">
+                <div class="c-n-game-result-score__header">
+                    <div class="c-n-game-result-score__l-score">
+                        <div class="c-n-game-result-score__ribbon c-n-game-result-score__ribbon--low">
+                            <h2>スコア</h2>
+                        </div>
+                        <p class="c-n-game-result-score__score c-n-game-result-score__score--low">
+                            <strong id="gameScore"></strong>点
+                        </p>
+                    </div>
+                </div>
+
+                                    
+                    <div class="c-n-login">
+                        <p class="c-n-login__title">
+                                                            ログインして遊べば<br>
+                                <strong>最大1,000,000<span>スター</span>獲得のチャンス!!</strong>
+                                                    </p>
+                                                    <p class="c-n-login__note">※dポイント（期間・用途限定）10,000ポイント＝1,000,000スター相当となります</p>
+                                                <div class="c-n-login__l-btn">
+                                                                                                <a href="https://hiroba.dpoint.docomo.ne.jp/game/redirect/easygame" class="c-n-login-btn" onclick="gtag('event', 'click', {'event_category': '非ログインゲーム結果画面', 'event_label': '会員登録・ログイン'});" data-google-interstitial=false>
+                                        <span class="c-n-login-btn__txt">会員登録</span>
+                                        <span class="c-n-login-btn__divider">または</span>
+                                        <span class="c-n-login-btn__txt">dアカウントIDログイン</span>
+                                    </a>
+                                                                                    </div>
+                        
+                                                    <p class="c-n-login__info">
+                                ※ご利用には<a href="https://hiroba.dpoint.docomo.ne.jp">ポイント広場</a>への登録が必要です</p>
+                                            </div>
+                            </div>
+
+            <div class="c-n-game-result__l-btn c-n-game-result__l-btn--login">
+                <button class="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--outline" onclick="
+                        window.adgame.adManager.interstitial.show();
+                        $(easygame.gameResult).hide();
+                        $(easygame.gameResultSp).hide();
+                    ">
+                                            ログインしないでゲームを続ける
+                                    </button>
+                <a class="c-n-btn-requid c-n-btn-requid--medium c-n-btn-requid--outline" href="/easygame">
+                    <img src="//img.kantangame.com/common/img/game/icon-home.png" alt="ホームアイコン">
+                    ホームへ戻る
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+                
+                            </main>
+
+            
+            
+    <aside class="l-n-game__side l-n-game__side--right c-n-game-side">
+    <div>
+        
+        
+
+
+
+    
+
+                                    
+                        
+                    
+                                                                                
+                                    <div id='gb_pc_banner_gamesrightside' style='min-width: 300px; min-height: 250px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('gb_pc_banner_gamesrightside'); });
+  </script>
+</div>
+                                        
+    </div>
+
+    <div class="c-n-game-recommend">
+                    <div class="c-n-game-recommend__related">
+                <h2 class="c-n-game-recommend__ttl">
+                    <img src="//img.kantangame.com/easygame/common/img/game/icon-hashtag-similar.png" alt="" width="20" height="20">
+                    似ているゲーム
+                </h2>
+
+                
+                <div class="c-n-hashtag">
+                    <ul class="c-n-hashtag__list">
+                                                    <li><a href="/easygame/hashtag/%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC/popular" class="c-n-hashtag__link"># キャラクター</a></li>
+                                                    <li><a href="/easygame/hashtag/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/popular" class="c-n-hashtag__link"># スライド</a></li>
+                                                    <li><a href="/easygame/hashtag/%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BC/popular" class="c-n-hashtag__link"># ファンタジー</a></li>
+                                                    <li><a href="/easygame/hashtag/%E7%BE%8E%E3%81%97%E3%81%84/popular" class="c-n-hashtag__link"># 美しい</a></li>
+                                                    <li><a href="/easygame/hashtag/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB/popular" class="c-n-hashtag__link"># シンプル</a></li>
+                                            </ul>
+                </div>
+            </div>
+        
+        <div class="c-n-game-recommend__popular">
+            <h2 class="c-n-game-recommend__ttl">
+                <img src="//img.kantangame.com/easygame/common/img/game/icon-fire.png" alt="" width="20" height="20">
+                おすすめのゲーム
+            </h2>
+
+            <ul class="c-n-game-recommend__l-item">
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/141" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': '二角取りPLAIN'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/141.png?20220517?v=2026060401004510369045" alt="二角取りPLAIN" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/497" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': '集めてにゃんこパズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/497.png?v=2026060401004510369045" alt="集めてにゃんこパズル" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/458" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'カラフルアソート'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/458.png?v=2026060401004510369045" alt="カラフルアソート" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/237" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': '二角取り'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/237.png?v=2026060401004510369045" alt="二角取り" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/472" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': '海賊バブルパズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/472.png?v=2026060401004510369045" alt="海賊バブルパズル" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/507" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'おきつね様の円結びパズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/507.png?v=2026060401004510369045" alt="おきつね様の円結びパズル" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/496" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'ジュエルロイヤルパズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/496.png?v=2026060401004510369045" alt="ジュエルロイヤルパズル" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/348" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'キラキラマジックパズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/348.jpg?v=2026060401004510369045" alt="キラキラマジックパズル" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/476" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'スマイルキューブ'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/476.png?v=2026060401004510369045" alt="スマイルキューブ" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/479" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'しろくまーじ'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/479.png?v=2026060401004510369045" alt="しろくまーじ" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/382" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'ギョギョッとパズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/382.png?v=2026060401004510369045" alt="ギョギョッとパズル" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/411" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'スーパーキャンディパズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/411.png?v=2026060401004510369045" alt="スーパーキャンディパズル" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/453" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': '森の宝石パズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/453.png?v=2026060401004510369045" alt="森の宝石パズル" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/491" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'マッチマート'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/491.png?v=2026060401004510369045" alt="マッチマート" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/460" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'かわいいどうぶつ集め'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/460.png?v=2026060401004510369045" alt="かわいいどうぶつ集め" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/461" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'たのしいクリスマスパズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/461.png?v=2026060401004510369045" alt="たのしいクリスマスパズル" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/452" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'メルティタイム'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/452.png?v=2026060401004510369045" alt="メルティタイム" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/784" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': '二角取りボーナスマッチ'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/784.png?v=2026060401004510369045" alt="二角取りボーナスマッチ" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/705" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'バスパーキングパズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/705.png?v=2026060401004510369045" alt="バスパーキングパズル" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/294" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'ドーナツパーティ'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/294.png?v=2026060401004510369045" alt="ドーナツパーティ" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/795" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'マジックスライド'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/795.png?v=2026060401004510369045" alt="マジックスライド" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/499" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'ソートマート'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/499.png?v=2026060401004510369045" alt="ソートマート" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/325" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': '鬼太郎 ようがめ'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/325.png?v=2026060401004510369045" alt="鬼太郎 ようがめ" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/500" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'かわいいおもちゃパズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/500.png?v=2026060401004510369045" alt="かわいいおもちゃパズル" width="80" height="80">
+                        </a>
+                    </li>
+                                    <li class="c-n-game-recommend__item">
+                        <a href="/easygame/game/407" data-google-interstitial="false" onclick="gtag('event', 'クリック', {'event_category': 'ゲーム画面おすすめゲーム一覧', 'event_label': 'にゃんたまパズル'});">
+                            <img src="//img.kantangame.com/game/img/plus/game/407.png?v=2026060401004510369045" alt="にゃんたまパズル" width="80" height="80">
+                        </a>
+                    </li>
+                            </ul>
+        </div>
+    </div>
+</aside>
+
+
+        </div>
+
+        
+                    
+            
+    <footer class="l-n-game__footer c-n-game-footer">
+    <div>
+                    
+            
+
+
+
+    
+
+                                    
+                        
+                    
+                                                                                
+                                    <div id='gb_pc_banner_gamesbottom' style='min-width: 728px; min-height: 90px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('gb_pc_banner_gamesbottom'); });
+  </script>
+</div>
+                                        
+            </div>
+</footer>
+
+
+            </section>
+
+    
+    
+    <div id="jsModalGameHowto" class="c-n-modal-block">
+    <div class="c-n-overlay"></div>
+
+    <div class="l-n-modal">
+        <div class="c-n-modal">
+            <div class="c-n-modal__l-close">
+                <button type="button" class="c-n-close" aria-label="閉じる" onclick="hideModal('jsModalGameHowto')"></button>
+            </div>
+            <div class="c-n-modal__inner">
+                <div class="c-n-modal__content">
+                    <div class="c-n-game-popup__inner">
+                        <div class="c-n-game-sec c-n-game-sec--border">
+                            <header class="c-n-game-sec__header">
+                                <h3 class="c-n-game-sec__ttl">ゲーム紹介</h3>
+                            </header>
+                            <div class="c-n-game-sec__body">
+                                <div class="c-n-game-howto">
+                                    <div class="c-n-game-howto__header">
+                                        <div class="c-n-game-howto__header-inner">
+                                            <div class="c-n-game-howto__thumb">
+                                                <img src="//img.kantangame.com/game/img/plus/game/795.png?v=2026060401004510369045" alt="マジックスライド">
+                                            </div>
+                                            <div class="c-n-game-howto__container">
+                                                <h2 class="c-n-game-howto__ttl">マジックスライド</h2>
+                                                <p class="c-n-game-howto__txt">魔法の世界のブロックパズル</p>
+                                                <div class="c-n-game-howto__info">#パズル</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-n-game-howto__sec">
+                                        <h3 class="c-n-game-howto__ttl">遊び方</h3>
+                                        <p class="c-n-game-howto__txt">ブロックをスライドさせて横のラインを作ろう<br />
+ブロックをスライドする度に下からブロックが追加されます<br />
+ブロックが上まで来てしまうとゲーム終了<br />
+ブロックを壊して壺のゲージを貯めるとダイヤ出現<br />
+ハイスコアを狙いましょう！</p>
+                                    </div>
+                                    <div class="c-n-game-howto__sec">
+                                        <h3 class="c-n-game-howto__ttl">注意事項</h3>
+                                        <p class="c-n-game-howto__txt">・当ゲームはゲーム内データ(アイテムやステージクリアステータス等)をセーブするためにCookieを使用しております。<br />
+・<span style="color:#F00;">Cookieはブラウザで履歴やキャッシュ(インターネット一時ファイル)を削除するときに、一緒に削除されてしまうことがありますのでご注意ください。</span>Cookieの設定についてはご利用のブラウザのヘルプよりご確認ください。<br />
+・ブラウザ等は最新のバージョンをご利用ください。<br />
+・プライベートブラウザモードでは正常に遊べない場合があります。<br />
+・ご利用の端末の状況、状態によっては正しく表示されない場合があります。<br />
+・推奨環境下であっても端末によっては音声が出ない場合があります。<br />
+・アドブロック等のプラグインにより正常に表示されない場合があります。</p>
+                                    </div>
+                                    <div class="c-n-game-howto__sec">
+                                        <h3 class="c-n-game-howto__ttl">推奨環境</h3>
+                                        <p class="c-n-game-howto__txt">■ OS<br />
+iOS12.0以降 / Android9.0以降 / Windows10以降 / MacOSX 10.9以降<br />
+<br />
+■ ブラウザ<br />
+Google Chrome最新版 / Safari最新版</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+    
+    <div id="jsModalReceiveTicket" class="c-n-modal-block">
+    <div class="c-n-overlay"></div>
+
+    <div class="l-n-modal">
+        <div class="c-n-modal">
+            <div class="c-n-modal__l-close">
+                <button type="button" class="c-n-close" aria-label="閉じる" onclick="hideModal('jsModalReceiveTicket')"></button>
+            </div>
+            <div class="c-n-modal__inner">
+                <div class="c-n-modal__content">
+                    <h2 class="c-n-modal__txt">抽選券を受け取る</h2>
+
+                    
+                    
+                    <button id="receiveWithAd" class="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--reward-ad">広告を視聴して8枚受け取る</button>
+                    <button id="receiveWithBooster" class="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--primary">スコアブースターを使う</button>
+                    <button id="receiveWithoutAd" class="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--outline">5枚受け取る</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+    <div id="gameContinue" class="c-n-modal-block">
+    
+    <div class="c-n-modal-overlay"></div>
+
+    
+    <div class="l-n-modal">
+        <div class="c-n-modal">
+            <div class="c-n-modal__inner">
+                <div class="c-n-modal__icon">
+                    <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20.5" r="18.5" stroke="currentColor" stroke-width="3"/>
+<circle cx="20" cy="29.25" r="3" fill="currentColor" stroke="currentColor" stroke-width="0.5"/>
+<path d="M17.0869 8.75H22.9131C23.3246 8.75 23.6538 9.07979 23.6631 9.48145L23.6602 9.5625L22.4941 23.5625C22.4617 23.9511 22.1361 24.25 21.7461 24.25H18.2539C17.9125 24.25 17.6204 24.0209 17.5312 23.7031L17.5059 23.5625L16.3398 9.5625C16.3034 9.12524 16.6481 8.75 17.0869 8.75Z" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
+</svg>
+
+                </div>
+                <div class="c-n-modal__content">
+                    <h2 class="c-n-modal__ttl">広告を見て<br>コンティニューしますか？</h2>
+                    <p class="c-n-modal__txt">
+                        コンティニューをすると今回のスコアが<br>
+                        次の送信スコアに加算されます。
+                    </p>
+                    <div class="c-n-continue-score">
+                        <p class="c-n-continue-score__title">今回のスコア</p>
+                        <p id="gameContinueScore" class="c-n-continue-score__text"></p>
+                    </div>
+                    <button id="gameContinueYes" class="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--reward">コンティニュー</button>
+                    <button id="gameContinueNo" class="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--outline">ゲームをやめる</button>
+                    <p class="c-n-modal__info">※広告を最後まで見終わらなかった場合、コンティニューはキャンセルされます。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+
+</html>

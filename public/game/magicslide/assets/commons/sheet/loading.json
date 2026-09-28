@@ -1,0 +1,195 @@
+﻿{"frames": {
+
+"c100.png":
+{
+	"frame": {"x":262,"y":59,"w":27,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":55},
+	"sourceSize": {"w":27,"h":55}
+},
+"c103.png":
+{
+	"frame": {"x":291,"y":59,"w":25,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":55},
+	"sourceSize": {"w":25,"h":55}
+},
+"c105.png":
+{
+	"frame": {"x":308,"y":173,"w":12,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":55},
+	"sourceSize": {"w":12,"h":55}
+},
+"c110.png":
+{
+	"frame": {"x":204,"y":59,"w":27,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":55},
+	"sourceSize": {"w":27,"h":55}
+},
+"c111.png":
+{
+	"frame": {"x":233,"y":59,"w":27,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":55},
+	"sourceSize": {"w":27,"h":55}
+},
+"c119.png":
+{
+	"frame": {"x":246,"y":2,"w":35,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":55},
+	"sourceSize": {"w":35,"h":55}
+},
+"c37.png":
+{
+	"frame": {"x":204,"y":2,"w":40,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":55},
+	"sourceSize": {"w":40,"h":55}
+},
+"c46.png":
+{
+	"frame": {"x":322,"y":173,"w":12,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":55},
+	"sourceSize": {"w":12,"h":55}
+},
+"c48.png":
+{
+	"frame": {"x":204,"y":116,"w":24,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":55},
+	"sourceSize": {"w":24,"h":55}
+},
+"c49.png":
+{
+	"frame": {"x":230,"y":116,"w":24,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":55},
+	"sourceSize": {"w":24,"h":55}
+},
+"c50.png":
+{
+	"frame": {"x":256,"y":116,"w":24,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":55},
+	"sourceSize": {"w":24,"h":55}
+},
+"c51.png":
+{
+	"frame": {"x":282,"y":116,"w":24,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":55},
+	"sourceSize": {"w":24,"h":55}
+},
+"c52.png":
+{
+	"frame": {"x":204,"y":173,"w":24,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":55},
+	"sourceSize": {"w":24,"h":55}
+},
+"c53.png":
+{
+	"frame": {"x":230,"y":173,"w":24,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":55},
+	"sourceSize": {"w":24,"h":55}
+},
+"c54.png":
+{
+	"frame": {"x":256,"y":173,"w":24,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":55},
+	"sourceSize": {"w":24,"h":55}
+},
+"c55.png":
+{
+	"frame": {"x":282,"y":173,"w":24,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":55},
+	"sourceSize": {"w":24,"h":55}
+},
+"c56.png":
+{
+	"frame": {"x":298,"y":230,"w":24,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":55},
+	"sourceSize": {"w":24,"h":55}
+},
+"c57.png":
+{
+	"frame": {"x":318,"y":59,"w":24,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":55},
+	"sourceSize": {"w":24,"h":55}
+},
+"c76.png":
+{
+	"frame": {"x":308,"y":116,"w":24,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":55},
+	"sourceSize": {"w":24,"h":55}
+},
+"c78.png":
+{
+	"frame": {"x":283,"y":2,"w":32,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":55},
+	"sourceSize": {"w":32,"h":55}
+},
+"c97.png":
+{
+	"frame": {"x":317,"y":2,"w":25,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":55},
+	"sourceSize": {"w":25,"h":55}
+},
+"loading_girl.png":
+{
+	"frame": {"x":2,"y":2,"w":200,"h":237},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":237},
+	"sourceSize": {"w":200,"h":237}
+},
+"loading_line.png":
+{
+	"frame": {"x":2,"y":241,"w":294,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":294,"h":30},
+	"sourceSize": {"w":294,"h":30}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.11.4",
+	"image": "loading.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":512},
+	"scale": "1"
+}
+}

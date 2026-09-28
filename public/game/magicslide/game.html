@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<script src="lib/createjs.1.0.0.min.js?v=1.0.0"></script>
+		<script src="lib/howler.min.js?v=2.2.3"></script>
+		<script src="lib/pixi-legacy.5.3.9.min.js?v=5.3.9"></script>
+		<script src="lib/Pixim.min.js?v=1.15.0"></script>
+		<script src="lib/Pixim-animate-container.min.js?v=2.3.0"></script>
+	</head>
+	<body style="margin:0px; overflow: hidden; background-color:#000000;">
+		<script src="lib/SCG-gmo-pixim.min.js?v=1.13.2"></script>
+		<script>
+			SCG.init ( {
+				basepath : './',
+				version : '20260529161536' ,
+				pixiOptions : { resolution : 2 , forceCanvas : false }
+			} , {
+				sdk: "/game/gamebox.iframe.js?v=1.5",
+			} , {
+				languageOptions: 'language.json',
+				languages:["ja","en"]
+			} ) ;
+		</script>
+		<script src="bundle.js?v=20260529161536"></script>
+	</body>
+</html>
