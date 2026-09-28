@@ -26,7 +26,7 @@ export function GameResultPanel({ score, onContinueWithoutLogin }: GameResultPan
         </div>
         <div className="c-n-game-result__l-btn">
           <button
-            className="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--primary"
+            className="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--outline"
             onClick={onContinueWithoutLogin}
           >
             もう一度遊ぶ
