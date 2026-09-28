@@ -41,10 +41,15 @@ npm run dev
 Deploys as a single Cloudflare Worker via `@opennextjs/cloudflare` / `wrangler`:
 
 ```bash
-npm run deploy   # build + deploy
-npm run push     # build + upload a new version (no traffic shift)
-npm run staging  # promote the latest uploaded version
+npm run deploy         # build + deploy to the default *.workers.dev URL
+npm run deploy:domain  # build + deploy, also attached to magic-slide.tubeclip.work
+npm run push           # build + upload a new version (no traffic shift)
+npm run staging        # promote the latest uploaded version
 ```
+
+Both `deploy` variants publish the same Worker (`magic-slide`) — `deploy:domain` just adds
+`--domain magic-slide.tubeclip.work` so the custom domain keeps pointing at this reference build
+without being wired into every deploy.
 
 ## Tech Stack
 
