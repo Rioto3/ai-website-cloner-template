@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { GameMessage } from "@/types/game";
-import { GameStartOverlay } from "@/components/GameStartOverlay";
 import { GameResultPanel } from "@/components/GameResultPanel";
 
 const GAME_SRC = "/game/magicslide/game.html?0000-00-00%2000%3A00%3A00";
@@ -25,7 +24,6 @@ const FORWARDED_KEYS = [
  */
 export function GameCenter() {
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const [started, setStarted] = useState(false);
   const [resultScore, setResultScore] = useState<number | null>(null);
   // The game posts its first message (getdata) as soon as its scripts load and
   // stalls forever if unanswered, so the iframe must not start loading until
@@ -98,7 +96,6 @@ export function GameCenter() {
 
   return (
     <main className="l-n-game__center c-n-game-center c-n-game-center--radius">
-      {!started && <GameStartOverlay onPlay={() => setStarted(true)} />}
       <iframe
         ref={iframeRef}
         className="c-n-game-center__game"
