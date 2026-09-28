@@ -240,3 +240,11 @@ html,body{overflow-x:hidden}
 .l-n-game__main{min-width:0}
 .l-n-game__center{min-width:0;padding-bottom:0}
 .c-n-game-center--radius{clip-path:inset(0 round 16px)}
+/* 100vh locks to the height Safari reports with its bottom toolbar hidden,
+   so the toolbar covers the bottom of the game when it's showing (e.g. in
+   a plain browser tab, not installed as a PWA). 100svh always assumes the
+   toolbar is visible (the safe minimum), so content never gets covered;
+   it's a no-op in a PWA/standalone context where there's no toolbar to
+   begin with. Keep the 100vh line first as a fallback for browsers that
+   don't understand svh. */
+.l-n-game{height:100vh;height:100svh}
