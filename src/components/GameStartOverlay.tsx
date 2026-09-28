@@ -23,11 +23,6 @@ export function GameStartOverlay({ onPlay }: GameStartOverlayProps) {
             ゲームスタート
           </button>
         </div>
-        <p className="c-n-game-start__info">
-          ゲームをスムーズに楽しむためには広告の表示が必要です。
-          <br />
-          広告ブロッカーをご利用の場合は一時的に無効にしてください。
-        </p>
       </div>
     </div>
   );

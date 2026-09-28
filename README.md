@@ -1,146 +1,90 @@
-# AI Website Cloner Template
+# magic-slide
 
-<a href="https://github.com/JCodesMore/ai-website-cloner-template/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a> <a href="https://github.com/JCodesMore/ai-website-cloner-template/stargazers"><img src="https://img.shields.io/github/stars/JCodesMore/ai-website-cloner-template?style=flat" alt="Stars" /></a> <a href="https://discord.gg/hrTSX5yTpB"><img src="https://img.shields.io/discord/1400896964597383279?label=discord" alt="Discord" /></a>
+A faithful clone of a mobile browser puzzle game ("Magic Slide" — a witch-themed block-sliding
+puzzle originally served from a docomo game portal), fully internalized to run with **zero
+external/vendor dependencies**, deployed as a single Cloudflare Worker.
 
-A reusable template for reverse-engineering any website into a clean, modern Next.js codebase using AI coding agents. 
+## Where this came from
 
-**Recommended: [Claude Code](https://docs.anthropic.com/en/docs/claude-code) with Opus 4.7 for best results** — but works with a variety of AI coding agents.
+This repo started as a generic "clone any website" template. Using that template's workflow, the
+target game's page was reverse-engineered and cloned: the shell UI (header, side panels, modals,
+result screen) was rebuilt in Next.js, and the game itself (all 162 runtime files — PixiJS,
+Howler, sprite atlases, sounds, JSON manifests) was mirrored locally and wired up so it runs with
+**0 requests to any third party**.
 
-Point it at a URL, run `/clone-website`, and your AI agent will inspect the site, extract design tokens and assets, write component specs, and dispatch parallel builders to reconstruct every section.
+The generic templating layer (the `/clone-website` skill, its inspection guide, and the
+multi-agent-platform scaffolding) has been removed — this repo is now scoped specifically to this
+one game.
 
-## Demo
+An attempt to go further — rebuild the game engine from scratch and reskin it as an original IP
+("ミツモリ村") — was tried and rolled back. See
+[`docs/archive/2026-09-mitsumori-ip-poc/`](docs/archive/2026-09-mitsumori-ip-poc/README.md) for
+what was attempted and what was learned. The project is currently back at the faithful witch-clone
+baseline, with cleanup work (mobile viewport, removing vendor/ad UI, deploying as a standalone
+Cloudflare Worker) layered on top.
 
-[![Watch the demo](docs/design-references/comparison.png)](https://youtu.be/O669pVZ_qr0)
+## Current position
 
-> Click the image above to watch the full demo on YouTube.
+Having established a working technique for cloning + internalizing this kind of puzzle game, this
+project is now exploring whether that capability is useful on its own — as a clean, ad-free,
+self-hosted reference build of the game, deployable anywhere as a single Worker.
 
-## Quick Start
+## Getting started
 
-> **Important:** Start by making your own copy with GitHub's **Use this template** button. Do not clone this template repository directly for your website project, and do not open pull requests here with your generated website.
+```bash
+npm install
+npm run dev
+```
 
-1. **Create your own repository from this template**
+## Deployment
 
-   On the GitHub page for this project, click **Use this template**, then click **Create a new repository**.
+Deploys as a single Cloudflare Worker via `@opennextjs/cloudflare` / `wrangler`:
 
-   Give your new repository a name, choose whether it should be public or private, then click **Create repository**. If GitHub shows an **Include all branches** option, you can leave it off.
-
-   This gives you your own separate project to work in, so your website changes stay in your account instead of coming back to the main template.
-
-2. **Open your new repository on your computer**
-
-   After GitHub creates your copy, open that new repository. Click **Code** and open or clone your new repository with your preferred coding tool.
-
-   If you use the terminal, the command will look like this:
-
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/YOUR-NEW-REPOSITORY.git
-   cd YOUR-NEW-REPOSITORY
-   ```
-
-3. **Install dependencies**
-   ```bash
-   npm install
-   ```
-4. **Start your AI agent** — Claude Code recommended:
-   ```bash
-   claude --chrome
-   ```
-5. **Run the skill**:
-   ```
-   /clone-website <target-url1> [<target-url2> ...]
-   ```
-6. **Customize** (optional) — after the base clone is built, modify as needed
-
-> Using a different agent? Open `AGENTS.md` for project instructions — most agents pick it up automatically.
-
-## Supported Platforms
-
-| Agent                                                         | Status                     |
-| ------------------------------------------------------------- | -------------------------- |
-| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | **Recommended** — Opus 4.7 |
-| [Codex CLI](https://github.com/openai/codex)                  | Supported                  |
-| [OpenCode](https://opencode.ai/)                              | Supported                  |
-| [GitHub Copilot](https://github.com/features/copilot)         | Supported                  |
-| [Cursor](https://cursor.com/)                                 | Supported                  |
-| [Windsurf](https://codeium.com/windsurf)                      | Supported                  |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli)     | Supported                  |
-| [Cline](https://github.com/cline/cline)                       | Supported                  |
-| [Roo Code](https://github.com/RooCodeInc/Roo-Code)            | Supported                  |
-| [Continue](https://continue.dev/)                             | Supported                  |
-| [Amazon Q](https://aws.amazon.com/q/developer/)               | Supported                  |
-| [Augment Code](https://www.augmentcode.com/)                  | Supported                  |
-| [Aider](https://aider.chat/)                                  | Supported                  |
-
-## Prerequisites
-
-- [Node.js](https://nodejs.org/) 24+
-- An AI coding agent (see [Supported Platforms](#supported-platforms))
+```bash
+npm run deploy   # build + deploy
+npm run push     # build + upload a new version (no traffic shift)
+npm run staging  # promote the latest uploaded version
+```
 
 ## Tech Stack
 
 - **Next.js 16** — App Router, React 19, TypeScript strict
 - **shadcn/ui** — Radix primitives + Tailwind CSS v4
 - **Tailwind CSS v4** — oklch design tokens
-- **Lucide React** — default icons (replaced by extracted SVGs during cloning)
-
-## How It Works
-
-The `/clone-website` skill runs a multi-phase pipeline:
-
-1. **Reconnaissance** — screenshots, design token extraction, interaction sweep (scroll, click, hover, responsive)
-2. **Foundation** — updates fonts, colors, globals, downloads all assets
-3. **Component Specs** — writes detailed spec files (`docs/research/components/`) with exact computed CSS values, states, behaviors, and content
-4. **Parallel Build** — dispatches builder agents in git worktrees, one per section/component
-5. **Assembly & QA** — merges worktrees, wires up the page, runs visual diff against the original
-
-Each builder agent receives the full component specification inline — exact `getComputedStyle()` values, interaction models, multi-state content, responsive breakpoints, and asset paths. No guessing.
-
-## Use Cases
-
-- **Platform migration** — rebuild a site you own from WordPress/Webflow/Squarespace into a modern Next.js codebase
-- **Lost source code** — your site is live but the repo is gone, the developer left, or the stack is legacy. Get the code back in a modern format
-- **Learning** — deconstruct how production sites achieve specific layouts, animations, and responsive behavior by working with real code
-
-## Not Intended For
-
-- **Phishing or impersonation** — this project must not be used for deceptive purposes, impersonation, or any activity that breaks the law.
-- **Passing off someone's design as your own** — logos, brand assets, and original copy belong to their owners.
-- **Violating terms of service** — some sites explicitly prohibit scraping or reproduction. Check first.
+- **Cloudflare Workers** — via `@opennextjs/cloudflare`
 
 ## Project Structure
 
 ```
 src/
   app/              # Next.js routes
-  components/       # React components
+  components/       # Game shell (header, side panels, modals, result panel)
     ui/             # shadcn/ui primitives
     icons.tsx       # Extracted SVG icons
   lib/utils.ts      # cn() utility
   types/            # TypeScript interfaces
-  hooks/            # Custom React hooks
 public/
-  images/           # Downloaded images from target
-  videos/           # Downloaded videos from target
+  game/             # Self-hosted game runtime — zero external deps
   seo/              # Favicons, OG images
 docs/
-  research/         # Extraction output & component specs
+  research/         # Extraction output from the original target site
   design-references/ # Screenshots
+  archive/          # Rolled-back experiments, kept with a summary of what was learned
 scripts/
-  sync-agent-rules.sh  # Regenerate agent instruction files
-  sync-skills.mjs      # Regenerate /clone-website for all platforms
+  download-assets.mjs # Asset download helper used during the original clone
 AGENTS.md           # Agent instructions (single source of truth)
 CLAUDE.md           # Claude Code config (imports AGENTS.md)
-GEMINI.md           # Gemini CLI config (imports AGENTS.md)
 ```
 
 ## Commands
 
 ```bash
-npm run dev    # Start dev server
-npm run build  # Production build
-npm run lint   # ESLint check
+npm run dev       # Start dev server
+npm run build     # Production build
+npm run lint      # ESLint check
 npm run typecheck # TypeScript check
-npm run check  # Run lint + typecheck + build
+npm run check     # Run lint + typecheck + build
+npm run deploy    # Build and deploy to Cloudflare Workers
 ```
 
 ### If using docker
@@ -150,22 +94,11 @@ docker compose up app --build # build and run the app
 docker compose up dev --build # run the app in dev mode on port 3001
 ```
 
-## Updating for Other Platforms
+## Not Intended For
 
-Two source-of-truth files power all platform support. Edit the source, then run the sync script:
-
-| What                   | Source of truth                         | Sync command                       |
-| ---------------------- | --------------------------------------- | ---------------------------------- |
-| Project instructions   | `AGENTS.md`                             | `bash scripts/sync-agent-rules.sh` |
-| `/clone-website` skill | `.claude/skills/clone-website/SKILL.md` | `node scripts/sync-skills.mjs`     |
-
-Each script regenerates the platform-specific copies automatically. Agents that read the source files natively need no regeneration.
-
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=JCodesMore/ai-website-cloner-template&type=Date)](https://star-history.com/#JCodesMore/ai-website-cloner-template&Date)
-
-## License
-
-MIT
+- **Phishing or impersonation** — this project must not be used for deceptive purposes,
+  impersonation, or any activity that breaks the law.
+- **Passing off someone's design as your own** — logos, brand assets, and original copy belong to
+  their owners.
+- **Violating terms of service** — the original site's terms should be checked before any public
+  redistribution of this clone.

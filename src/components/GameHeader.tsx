@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 interface GameHeaderProps {
   onOpenHowto: () => void;
 }
@@ -16,11 +18,11 @@ export function GameHeader({ onOpenHowto }: GameHeaderProps) {
   return (
     <header className="l-n-game__head c-n-game-head">
       <div className="c-n-game-head__left">
-        <a className="c-n-game-link" href="/easygame">
+        <Link className="c-n-game-link" href="/">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/images/icon-home.png" alt="" />
           ホームへ戻る
-        </a>
+        </Link>
         <div className="c-n-game-head__l-info">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/images/795.png" alt="パズルゲーム｜マジックスライド" />

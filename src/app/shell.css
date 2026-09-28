@@ -227,3 +227,25 @@ h1,h2,h3,p{margin:0}
 @media(hover: hover){.c-n-btn-gameplay:hover,.c-n-btn-requid:hover,.c-n-btn-fixed:hover{opacity:.7}.c-n-login-btn:hover{opacity:.7}}
 @media(max-width: 1200px){.n-c-top-mission__label{font-size:1.6rem}.l-n-game__side{display:none}}
 @media screen and (max-height: 600px){.l-n-modal{align-items:flex-start}}
+
+/* --- Our own additions (not from the original site) ---
+   The original page embedded this game inside a wider portal layout, so
+   .l-n-game/.l-n-game__main assumed a fixed >=800px desktop container and
+   .l-n-game__center/.c-n-game-center--radius reserved 100px for the ad
+   footer at the bottom. Standalone on a real mobile viewport that min-width
+   causes horizontal overflow and pushes the centered start/result overlays
+   off-screen. Since the ad footer no longer exists, drop both constraints. */
+.l-n-game{min-width:0}
+.l-n-game__main{min-width:0}
+.l-n-game__center{padding-bottom:0}
+.c-n-game-center--radius{clip-path:inset(0 round 16px)}
+@media(max-width: 600px){
+  .c-n-game-head{padding:0 8px;gap:8px}
+  .c-n-game-head__left{gap:12px;min-width:0}
+  .c-n-game-head__right{gap:4px}
+  .c-n-game-head__l-info{min-width:0}
+  .c-n-game-head__ttl{font-size:1.4rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .c-n-game-head__bookmark{display:none}
+  .c-n-game-btn{width:auto;padding:6px 10px}
+  .c-n-game-btn .c-n-bookmark-btn__txt{display:none}
+}

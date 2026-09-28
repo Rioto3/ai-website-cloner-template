@@ -1,7 +1,5 @@
 "use client";
 
-import { ExclamationCircleIcon } from "@/components/icons";
-
 interface HowtoModalProps {
   open: boolean;
   onClose: () => void;
@@ -101,96 +99,6 @@ export function HowtoModal({ open, onClose }: HowtoModalProps) {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/** #jsModalReceiveTicket — present in the original DOM, hidden by default
-    (reachable only in the logged-in reward flow). */
-export function ReceiveTicketModal() {
-  return (
-    <div id="jsModalReceiveTicket" className="c-n-modal-block">
-      <div className="c-n-overlay"></div>
-      <div className="l-n-modal">
-        <div className="c-n-modal">
-          <div className="c-n-modal__l-close">
-            <button type="button" className="c-n-close" aria-label="閉じる"></button>
-          </div>
-          <div className="c-n-modal__inner">
-            <div className="c-n-modal__content">
-              <h2 className="c-n-modal__txt">抽選券を受け取る</h2>
-              <button
-                id="receiveWithAd"
-                className="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--reward-ad"
-              >
-                広告を視聴して8枚受け取る
-              </button>
-              <button
-                id="receiveWithBooster"
-                className="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--primary"
-              >
-                スコアブースターを使う
-              </button>
-              <button
-                id="receiveWithoutAd"
-                className="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--outline"
-              >
-                5枚受け取る
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/** #gameContinue — present in the original DOM, hidden by default
-    (reachable only for logged-in users on continuable games). */
-export function ContinueModal() {
-  return (
-    <div id="gameContinue" className="c-n-modal-block">
-      <div className="c-n-modal-overlay"></div>
-      <div className="l-n-modal">
-        <div className="c-n-modal">
-          <div className="c-n-modal__inner">
-            <div className="c-n-modal__icon">
-              <ExclamationCircleIcon />
-            </div>
-            <div className="c-n-modal__content">
-              <h2 className="c-n-modal__ttl">
-                広告を見て
-                <br />
-                コンティニューしますか？
-              </h2>
-              <p className="c-n-modal__txt">
-                コンティニューをすると今回のスコアが
-                <br />
-                次の送信スコアに加算されます。
-              </p>
-              <div className="c-n-continue-score">
-                <p className="c-n-continue-score__title">今回のスコア</p>
-                <p id="gameContinueScore" className="c-n-continue-score__text"></p>
-              </div>
-              <button
-                id="gameContinueYes"
-                className="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--reward"
-              >
-                コンティニュー
-              </button>
-              <button
-                id="gameContinueNo"
-                className="c-n-btn-fixed c-n-btn-fixed--w300 c-n-btn-fixed--outline"
-              >
-                ゲームをやめる
-              </button>
-              <p className="c-n-modal__info">
-                ※広告を最後まで見終わらなかった場合、コンティニューはキャンセルされます。
-              </p>
             </div>
           </div>
         </div>

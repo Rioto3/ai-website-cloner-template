@@ -76,6 +76,9 @@ export function GameCenter() {
 
   useEffect(() => {
     window.addEventListener("message", handleMessage);
+    // Intentional: the iframe src is gated on this flag so the listener above
+    // is guaranteed to be attached before the game's first postMessage fires.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setListenerReady(true);
     return () => window.removeEventListener("message", handleMessage);
   }, [handleMessage]);
