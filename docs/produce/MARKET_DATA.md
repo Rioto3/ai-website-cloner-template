@@ -65,6 +65,9 @@
 | インタースティシャル広告のeCPM | 米国で約14ドル。日本のiOSでは2025年Q4に35%下落（リワードは約4%減にとどまった） | [Bidlogic](https://bidlogic.io/2026/01/30/what-happened-to-mobile-app-ecpms-in-q4-2025/) |
 | 広告の出し方の定石 | リワードを主役にし、インタースティシャルは2〜3セッションに1回程度に抑える。強制的な広告を増やすとD7の継続率が下がる | [RevenueLab](https://www.revenuelab.fyi/blog/admob-ecpm-benchmarks-2026) |
 | 広告収益の実例 | DAU 2万・1日4セッション・セッションごとに1回の広告で、月1,400〜3,000ドル。ただし逆算するとeCPMが1ドル前後になり、低単価の国を多く含む前提と読める | [Juego Studio](https://www.juegostudio.com/blog/arpdau-benchmarks-by-game-genre) |
+| AdMobの支払い基準額 | 日本円のアカウントで8,000円、米ドルで100ドル。基準額に届くまで支払いは行われず、確定額で判定される | [AdMobヘルプ](https://support.google.com/admob/answer/2772208?hl=ja) |
+| Apple Developer Programの年会費 | 99ドル。日本円では、Apple Developerアプリ経由で12,800〜12,980円の報告がある。承認までの日数はAppleが公開しておらず、経験談では2日〜1週間 | [テクラル](https://www.tekural.com/blog/apple-developer-program-cost)、[諸行無常（note）](https://note.com/sh0gy0muj0/n/n871119c6fc66) |
+| App Storeの審査 | 90%以上が48時間以内に結果が出るとされる。他のアプリに酷似したアプリ、中身の薄い量産、飽和したカテゴリへの追加は、4.3（スパム）で却下されることがある | [Zenn](https://zenn.dev/yutaka520/articles/8c7cfdb8e435fd)、[エンスポーツ](https://corp.ensports.com/developers/appstore-guideline-design-spam) |
 | 日本の個人開発の実態 | 月10万円未満が多数。初心者で月1万円以上が達成例として語られる | [ITプロマガジン](https://itpropartners.com/blog/1657/)、[ゲームしてるん](https://gameshiterun.com/kojingame-moukaranai/) |
 
 ## 6. パブリッシャーとのレベニューシェア（ハイパーカジュアル）
@@ -85,5 +88,4 @@
 - 広告収益型（ハイパーカジュアル）とアプリ内課金型の売上の比率
 - 小規模タイトルの自然流入（1日の新規インストール数）の分布 — 見つけられなかった。試算の最大の不確実性
 - 日本のiOSでの実効eCPM（フィル率や仲介を含めた実績値）
-- 広告収益の支払いしきい値（AdMobは100ドル前後と理解しているが要確認）
 - Appleの審査で「他作品の複製」とみなされる条件（コピー・スパム関連のガイドライン）
