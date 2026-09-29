@@ -3,9 +3,8 @@ import "./globals.css";
 import "./shell.css";
 
 export const metadata: Metadata = {
-  title: "マジックスライド",
-  description:
-    "魔法の世界のブロックパズル「マジックスライド」。ブロックをスライドさせて横のラインを作ろう。無料で遊べるかんたんゲーム。",
+  title: "和菓子スライド（仮題）",
+  description: "ブロックをスライドさせて横のラインをそろえる、和菓子モチーフのブロックパズル。",
   icons: {
     icon: "/seo/favicon.ico",
     apple: "/seo/apple-touch-icon.png",
