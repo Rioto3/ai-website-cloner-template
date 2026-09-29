@@ -52,8 +52,38 @@
 - 日本では女性の全年代でパズルが最も遊ばれており、主婦層を狙うという当初の直感とも一致する
 - ただし日本でこの層が実際に遊んでいるのは「知っているキャラクターが出てくるパズル」（ツムツム）でもある。**IPの有無が日本での継続率を左右する可能性**がある。これはIP方針を決めるときの論点になる
 
-## 5. 未確認の事項（必要になったら調べる）
+## 5. 広告収益・リテンションのベンチマーク（収益試算の入力値）
+
+出典はすべて二次情報（調査会社のレポートを引用したブログなど）。ジャンル別のリテンション表は、元をたどると2022年のAppsFlyerの調査に行き着くという指摘もあるため、古い数字として扱う。
+
+| 指標 | 数値 | 出典 |
+|---|---|---|
+| パズルのリテンション | D1 約32%、D7 約12%、D30 約5% | [Segwise](https://segwise.ai/blog/mobile-gaming-app-user-retention-strategies)、[The Game Scientist](https://thegamescientist.com/tools/retention-benchmarks/) |
+| 全ジャンルのリテンション（中央値、2025年） | D1 約22%、D7 4%弱、D30 約0.7〜0.8% | [GameAnalytics](https://www.gameanalytics.com/reports/2026-mobile-pc-gaming-benchmarks) |
+| パズルのARPDAU（1日1ユーザーあたり収益、2025年予測） | 約0.08ドル（ハイパーカジュアルは0.05ドル）。課金を含む業界平均で、小規模タイトルでは下振れしやすい | [Juego Studio](https://www.juegostudio.com/blog/arpdau-benchmarks-by-game-genre) |
+| リワード動画広告のeCPM | ティア1の国で15〜40ドル。米国は約16〜20ドル、日本のAndroidは約17ドル | [Udonis](https://www.blog.udonis.co/mobile-marketing/mobile-apps/ecpms)、[RevenueLab](https://www.revenuelab.fyi/blog/admob-ecpm-benchmarks-2026) |
+| インタースティシャル広告のeCPM | 米国で約14ドル。日本のiOSでは2025年Q4に35%下落（リワードは約4%減にとどまった） | [Bidlogic](https://bidlogic.io/2026/01/30/what-happened-to-mobile-app-ecpms-in-q4-2025/) |
+| 広告の出し方の定石 | リワードを主役にし、インタースティシャルは2〜3セッションに1回程度に抑える。強制的な広告を増やすとD7の継続率が下がる | [RevenueLab](https://www.revenuelab.fyi/blog/admob-ecpm-benchmarks-2026) |
+| 広告収益の実例 | DAU 2万・1日4セッション・セッションごとに1回の広告で、月1,400〜3,000ドル。ただし逆算するとeCPMが1ドル前後になり、低単価の国を多く含む前提と読める | [Juego Studio](https://www.juegostudio.com/blog/arpdau-benchmarks-by-game-genre) |
+| 日本の個人開発の実態 | 月10万円未満が多数。初心者で月1万円以上が達成例として語られる | [ITプロマガジン](https://itpropartners.com/blog/1657/)、[ゲームしてるん](https://gameshiterun.com/kojingame-moukaranai/) |
+
+## 6. パブリッシャーとのレベニューシェア（ハイパーカジュアル）
+
+| 指標 | 数値 | 出典 |
+|---|---|---|
+| パブリッシャーの合格ライン（Voodoo） | D1リテンション45%超、CPI 0.25ドル未満 | [hyper-casual.games](https://hyper-casual.games/blog/what-does-the-publisher-anticipate-from-game) |
+| CrazyLabsの目安 | CPI 0.25ドル以下（アイドル系は0.40ドル以下、Facebook基準） | 同上 |
+| レベニューシェア | CrazyLabsの開発者向けチャレンジは見出しで「55%」。それ以外の配分は確認できていない | [PocketGamer.biz](https://www.pocketgamer.biz/news/79316/55-rev-share-in-the-new-hypercasual-developer-challenge-by-crazylabs/) |
+| 提携の形 | 開発者が作った試作を、パブリッシャーが広告でテストして採否を決める。収益は分け合う | [gamebiz](https://gamebiz.jp/news/357958) |
+
+これらはハイパーカジュアル向けの基準で、パズルやハイブリッドカジュアルでは水準が異なる可能性がある。パブリッシャーが見るのは、ゲームの新奇性よりもD1リテンションとCPIという計測値。
+
+## 7. 未確認の事項（必要になったら調べる）
 
 - Royal Matchの詳しいユーザー属性（年齢・性別の比率）
 - 日本のパズルジャンル全体の売上
 - 広告収益型（ハイパーカジュアル）とアプリ内課金型の売上の比率
+- 小規模タイトルの自然流入（1日の新規インストール数）の分布 — 見つけられなかった。試算の最大の不確実性
+- 日本のiOSでの実効eCPM（フィル率や仲介を含めた実績値）
+- 広告収益の支払いしきい値（AdMobは100ドル前後と理解しているが要確認）
+- Appleの審査で「他作品の複製」とみなされる条件（コピー・スパム関連のガイドライン）
