@@ -32,6 +32,9 @@ maintenance and support.
      logic.
   3. Use portable asset formats (PNG/SVG images, audio files).
   4. Keep the rendering layer thin.
+- **Pace: steady, not rushed.** The estimates in `L0_PLAN.md` are one indicator based on conventional
+  effort; the June R9 date is a target to attempt, not a reason to hurry. The 8 h/week figure is
+  provisional and may change with progress. Do not add urgency, extra scope, or side work to meet it.
 - **Scope stays minimal**: core loop, best-score save, a hook for a rewarded-ad continue, theme
   assets, sound. No boosters, shop, gacha, coins, or jar/diamonds until after L0.
 - **Rights**: everything in `public/game/` (vendor art, sound, `bundle.js`) and the leftover
