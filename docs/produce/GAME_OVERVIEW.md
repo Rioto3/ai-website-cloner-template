@@ -95,12 +95,15 @@
 |---|---|---|
 | ページのタイトル・説明文 | `src/app/layout.tsx`（「マジックスライド」、元サイトの紹介文） | **必須** |
 | favicon・ホーム画面アイコン | `public/seo/*`（元ポータル由来） | **必須** |
-| リザルト背景など | `public/images/bg-win.png`、`icon-heart-off.png` | **必須**（現在のUIで使っているかも含めて確認） |
-| 元サイトのCSS | `src/app/shell.css`（元サイトのCSSをそのまま移植） | 優先度は低い。ただし見た目の意匠として整理が必要 |
+| 元サイトのCSS | `src/app/shell.css` | **対処済み。** 元サイトのCSSの移植（250行）から、今のページが使う分だけに縮小した |
 
-### D. 使っていないのに公開されてしまうもの（すぐ対処すべき）
+### D. 使っていないのに公開されてしまうもの
 
-`public/images/` には、**元ポータルに載っていた他のゲーム24本分のサムネイル**（`141.png`〜`795.png`）、元サイトの`app.css`・`timesale.css`、jQueryなどが、どこからも参照されないまま残っている。これらはデプロイすると静的ファイルとして公開状態になる。今回のゲームとは無関係な他社のアセットなので、**置換の議論を待たずに削除してよい**。
+**対処済み。** `public/images/`（他のゲーム24本分のサムネイル、元ポータルの`app.css`・`timesale.css`、jQuery、未使用のアイコン、SDKの複製。約1.4MB）は、どこからも使われていなかったので削除した（ブランチ`chore/remove-unused-third-party-assets`）。
+
+**まだ残っているもの（判断が必要）：** `docs/design-references/`（元サイトとゲームのスクリーンショット、7.1MB）と、`docs/research/original-page.html`・`page-used.css`（元サイトのHTMLとCSSの保存）。配信はされないが、このリポジトリは公開（PUBLIC）なので、リポジトリ上では他社の素材が見える状態になっている。
+
+**置換が必要な素材の整理と、仮置きの方針は、[ASSET_REPLACEMENT.md](ASSET_REPLACEMENT.md)にまとめた。**
 
 ## 7. 権利者について（未確定）
 
