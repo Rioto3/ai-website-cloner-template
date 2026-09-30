@@ -54,6 +54,12 @@ maintenance and support.
   What was learned is in [`docs/archive/2026-09-mitsumori-ip-poc/`](docs/archive/2026-09-mitsumori-ip-poc/README.md);
   the full code is at the git tag `archive/mitsumori-ip-poc` (engine in `src/game/engine`).
 
+## Deployments (separate Cloudflare Workers, separate worktrees)
+- `slide-game` — the main project (this checkout). `npm run deploy`.
+- `wagashi-slide` — the early prototype, kept stable. Branch `stable/wagashi-prototype`, tag `wagashi-prototype-v1`, worktree `.claude/worktrees/wagashi` (run `npm ci` there before deploying).
+- `magic-slide` — the untouched original clone. Tag `vendor-original-assets`, worktree `.claude/worktrees/original`.
+- Worktrees live under `.claude/worktrees/` (gitignored). Each needs its own real `node_modules` (a symlink breaks Turbopack).
+
 ## Tech Stack
 - **Framework:** Next.js 16 (App Router, React 19, TypeScript strict)
 - **UI:** shadcn/ui (Radix primitives, Tailwind CSS v4, `cn()` utility)
