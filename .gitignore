@@ -46,3 +46,4 @@ next-env.d.ts
 # Local temp files
 temp/
 scripts/theme/.cache/
+.claude/worktrees/
