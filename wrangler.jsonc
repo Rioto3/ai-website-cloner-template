@@ -1,8 +1,8 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"main": ".open-next/worker.js",
-	"name": "magic-slide",
-	// The wagashi-theme build lives on *.workers.dev only; magic-slide.tubeclip.work belongs to the original build (worker magic-slide-original)
+	"name": "wagashi-slide",
+	// The wagashi-theme build; the original build is the separate worker "magic-slide"
 	"workers_dev": true,
 	"compatibility_date": "2026-07-05",
 	"compatibility_flags": [
@@ -18,7 +18,7 @@
 			// Self-reference service binding, the service name must match the worker name
 			// see https://opennext.js.org/cloudflare/caching
 			"binding": "WORKER_SELF_REFERENCE",
-			"service": "magic-slide"
+			"service": "wagashi-slide"
 		}
 	],
 	"r2_buckets": [
@@ -29,7 +29,7 @@
 			// Create the bucket before deploying
 			// You can change the bucket name if you want
 			// See https://developers.cloudflare.com/workers/wrangler/commands/#r2-bucket-create
-			"bucket_name": "magic-slide-cache"
+			"bucket_name": "wagashi-slide-cache"
 		}
 	],
 	"images": {
