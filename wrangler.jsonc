@@ -2,6 +2,11 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"main": ".open-next/worker.js",
 	"name": "magic-slide",
+	// Keep the *.workers.dev URL alongside the custom domain (declaring routes turns workers.dev off by default)
+	"workers_dev": true,
+	"routes": [
+		{ "pattern": "magic-slide.tubeclip.work", "custom_domain": true }
+	],
 	"compatibility_date": "2026-07-05",
 	"compatibility_flags": [
 		"nodejs_compat",

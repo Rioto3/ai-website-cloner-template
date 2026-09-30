@@ -16,7 +16,7 @@
     "push": "opennextjs-cloudflare build && wrangler versions upload",
     "staging": "wrangler versions deploy --yes",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "deploy:domain": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --domain magic-slide.tubeclip.work"
+    "deploy:domain": "npm run deploy"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
