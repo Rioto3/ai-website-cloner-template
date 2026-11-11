@@ -1,3 +1,15 @@
+<!-- BEGIN:fork-rules (Rioto3 fork only; keep this block when merging upstream) -->
+
+# Fork rule: never push from a working copy
+
+This repository is the template itself (`Rioto3/ai-website-cloner-template`). Do not use it as a working copy for a clone.
+
+- Run `git remote -v` before any `git push`. If `origin` points to `Rioto3/ai-website-cloner-template`, **do not push**, and tell the user instead. The only exception is an explicit request to maintain the template itself.
+- Do clone work in a separate directory outside this one, in a repository with no link to this template (copy the files without `.git`, then `git init`).
+- `main` is protected on GitHub. Changes to the template go through a branch and a pull request, and never directly to `main`.
+
+<!-- END:fork-rules -->
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
